@@ -13,4 +13,13 @@ public class WeatherManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
+    /// <summary>
+    /// SpawnTornado() will create a tornado
+    /// </summary>
+    void SpawnTornado()
+    {
+
+    }
 }
