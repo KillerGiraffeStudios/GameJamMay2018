@@ -157,11 +157,6 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 446764292}
-    - target: {fileID: 114586032535337036, guid: e7ef319304cec82448aa75aeb665a45f,
-        type: 2}
-      propertyPath: bulletSpawn
-      value: 
-      objectReference: {fileID: 610654042}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
   m_IsPrefabParent: 0
@@ -314,11 +309,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
---- !u!4 &610654042 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4085122365545772, guid: e7ef319304cec82448aa75aeb665a45f,
-    type: 2}
-  m_PrefabInternal: {fileID: 246345126}
 --- !u!1 &843636569
 GameObject:
   m_ObjectHideFlags: 0
