@@ -54,7 +54,7 @@ Transform:
   m_GameObject: {fileID: 1530842871163204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.3389115, y: -2.501607, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 4878869770659612}
   m_Father: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   acorn: {fileID: 1467909739565608, guid: 3b2699bf30faf8846a88beba8c70ce36, type: 2}
   MinDist: 4
   MaxDist: 4
-  speed: 2
+  speed: 1
   Bullet: {fileID: 1467909739565608, guid: 3b2699bf30faf8846a88beba8c70ce36, type: 2}
 --- !u!114 &114864474018086314
 MonoBehaviour:
