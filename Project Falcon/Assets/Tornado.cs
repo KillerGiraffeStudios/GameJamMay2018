@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Tornado : MonoBehaviour {
 
+    // Directional speed of the tornado
+    [SerializeField]
+    float speed;
+
+    // Rotational speed of the tornado
+    [SerializeField]
+    float rotation;
+
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +23,9 @@ public class Tornado : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void PlayerTakeDamage(GameObject player)
+    {
+        // Send damage to player
+    }
 }
