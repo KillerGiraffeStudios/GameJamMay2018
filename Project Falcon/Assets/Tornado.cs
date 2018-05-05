@@ -6,26 +6,56 @@ public class Tornado : MonoBehaviour {
 
     // Directional speed of the tornado
     [SerializeField]
-    float speed;
+    private float speedX;
+    [SerializeField]
+    private float speedY;
 
     // Rotational speed of the tornado
     [SerializeField]
-    float rotation;
+    private float rotation;
+
+    // Is the player caught in the tornado
+    private bool damagePlayer = false;
+
+    // Reference to the player
+    private GameObject player;
 
 
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        // Generate directional speed
+        //this.GameObject.Vector3
+
+        // Generate a rotation
+
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void PlayerTakeDamage(GameObject player)
+	void Update ()
     {
-        // Send damage to player
+        // Player takes damage if they are in the tornado
+        if (this.damagePlayer)
+        {
+            this.player.SendMessage("TakeDamage", 10);
+        }
+    }
+
+
+    /// <summary>
+    /// OnCollisionEnter() will be called whenever an object collieds with the tornado and then 
+    /// call the correct function.
+    /// </summary>
+    /// <param name="obj"></param>
+    void OnCollisionEnter(Collision obj)
+    {
+        // If we collied with the players, refrence them and start dealing damage
+        if (obj.gameObject.tag == "Ship")
+        {
+            this.player = obj.gameObject;
+            this.damagePlayer = true;
+        }
     }
 }
