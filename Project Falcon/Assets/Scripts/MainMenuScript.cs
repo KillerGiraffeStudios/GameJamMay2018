@@ -7,6 +7,9 @@ public class MainMenuScript : MonoBehaviour {
     public GameObject startText;
     public GameObject redText;
 
+    public List<Transform> numberOfPlayersText;
+    public GameObject difficultyRatingText;
+
     // Seconds
     public float startTextBlinkTime = 1;    
 
@@ -22,7 +25,108 @@ public class MainMenuScript : MonoBehaviour {
  
            StartCoroutine(ChangeTextColour());
         }
+
+        if (Input.GetKey("up"))
+        {
+            ChangeNumberOfPlayers(1);
+        }
+
+        if (Input.GetKey("down"))
+        {
+            ChangeNumberOfPlayers(-1);
+        }
+
 	}
+
+    private int ChangeNumberOfPlayers(int direction)
+    {
+
+        Transform currentActive = null;
+
+        foreach(Transform text in numberOfPlayersText)
+        {
+            if (text.gameObject.activeSelf)
+            {
+                currentActive = text;
+            }
+        }
+
+        
+
+        if (direction > 0)
+        {
+
+            int next = numberOfPlayersText.IndexOf(currentActive) + 1;
+
+            if (next >= numberOfPlayersText.Count)
+            {
+                next = 0;
+            }
+
+            switch (currentActive.name)
+            {
+                case "One":
+                    currentActive.gameObject.SetActive(false);
+                   
+                    numberOfPlayersText[next].gameObject.SetActive(true);
+                    return 2;
+
+                case "Two":
+                    currentActive.gameObject.SetActive(false);
+                    numberOfPlayersText[next].gameObject.SetActive(true);
+                    return 3;
+
+                case "Three":
+                    currentActive.gameObject.SetActive(false);
+                    numberOfPlayersText[next].gameObject.SetActive(true);
+                    return 4;
+
+                case "Four":
+                    currentActive.gameObject.SetActive(false);
+                    numberOfPlayersText[next].gameObject.SetActive(true);
+                    return 1;
+
+
+            }
+        }
+        else if(direction < 0)
+        {
+            int prev = numberOfPlayersText.IndexOf(currentActive) - 1;
+
+            if (prev < 0)
+            {
+                prev = numberOfPlayersText.Count - 1;
+            }
+
+            switch (currentActive.name)
+            {
+                case "One":
+                    currentActive.gameObject.SetActive(false);
+
+                    numberOfPlayersText[prev].gameObject.SetActive(true);
+                    return 4;
+
+                case "Two":
+                    currentActive.gameObject.SetActive(false);
+                    numberOfPlayersText[prev].gameObject.SetActive(true);
+                    return 1;
+
+                case "Three":
+                    currentActive.gameObject.SetActive(false);
+                    numberOfPlayersText[prev].gameObject.SetActive(true);
+                    return 2;
+
+                case "Four":
+                    currentActive.gameObject.SetActive(false);
+                    numberOfPlayersText[prev].gameObject.SetActive(true);
+                    return 3;
+
+
+            }
+        }
+
+        return 1;
+    }
 
     /// <summary>
     /// Blinking animation for start game text

@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="623.66396"
+     inkscape:cx="196.5211"
      inkscape:cy="480"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,7 +73,7 @@
            y="174.28572"
            style="fill:#ff00ff" /></flowRegion><flowPara
          id="flowPara16"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'AR DARLING';-inkscape-font-specification:'AR DARLING';fill:#ff0000">Serious Squirrel</flowPara></flowRoot>    <flowRoot
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'AR DARLING';-inkscape-font-specification:'AR DARLING';fill:#800000">Serious Squirrel</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot18"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
