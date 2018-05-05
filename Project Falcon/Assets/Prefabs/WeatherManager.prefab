@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095491176713044}
   - component: {fileID: 198092712323832724}
+  - component: {fileID: 114467689428173062}
   - component: {fileID: 199340993782633270}
   m_Layer: 0
   m_Name: WeatherManager
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114467689428173062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871124340804304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd4d8236ec382049876e826634af6d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tornadoPrefab: {fileID: 0}
 --- !u!198 &198092712323832724
 ParticleSystem:
   m_ObjectHideFlags: 1

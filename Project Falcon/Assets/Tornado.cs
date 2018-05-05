@@ -39,8 +39,20 @@ public class Tornado : MonoBehaviour {
         // Player takes damage if they are in the tornado
         if (this.damagePlayer)
         {
-            this.player.SendMessage("TakeDamage", 10);
+            this.player.SendMessage("TakeDamage", 1);
         }
+    }
+
+
+    /// <summary>
+    /// Sets the speed of the tornado in the x and y directions
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    public void SetDirectionalSpeeds(float x, float y)
+    {
+        this.directionSpeedX = x;
+        this.directionSpeedY = y;
     }
 
 
