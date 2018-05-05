@@ -7,7 +7,7 @@ public class MetaScript : MonoBehaviour {
 	private static GameObject Anchor;
 
 	
-	public float playerCount = 1;
+	[Range(1,4)]public int playerCount = 1;
 	// Use this for initialization
 	void Start () {
 		
