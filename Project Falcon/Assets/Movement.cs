@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour {
 	public GamePad.Index Player = GamePad.Index.One;
 	private Rigidbody2D r_body;
 	public float acceleration = 0;
+	public float turnSpeed = 1;
 	public float maxVelocity;
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class Movement : MonoBehaviour {
 	void Update () {
 		leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, Player);
 		// leftStick.Normalize();
-		transform.Rotate(0,0,-leftStick.x);
+		transform.Rotate(0,0,-leftStick.x * turnSpeed);
 		
 		float rotation = Mathf.Deg2Rad * (transform.eulerAngles.z);
 		r_body.AddForce(new Vector2(Mathf.Cos(rotation),Mathf.Sin(rotation)) * acceleration);
