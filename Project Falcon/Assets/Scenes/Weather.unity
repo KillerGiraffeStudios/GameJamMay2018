@@ -298,15 +298,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1871124340804304, guid: 264e0e7aa1932964f94687d9cfe4e45e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199340993782633270, guid: 264e0e7aa1932964f94687d9cfe4e45e,
+    - target: {fileID: 198092712323832724, guid: 264e0e7aa1932964f94687d9cfe4e45e,
         type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 264e0e7aa1932964f94687d9cfe4e45e, type: 2}
   m_IsPrefabParent: 0
@@ -348,11 +344,6 @@ Prefab:
     - target: {fileID: 4042925284380896, guid: ffbb66e11e2b8f1408b22708ddc704eb, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198675581809984084, guid: ffbb66e11e2b8f1408b22708ddc704eb,
-        type: 2}
-      propertyPath: SubModule.enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1412043384950806, guid: ffbb66e11e2b8f1408b22708ddc704eb, type: 2}
       propertyPath: m_IsActive
