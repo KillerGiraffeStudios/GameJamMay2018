@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301824044}
   - component: {fileID: 301824043}
+  - component: {fileID: 301824045}
   m_Layer: 0
   m_Name: tree_7 (3)
   m_TagString: SpawnTree
@@ -187,6 +188,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301824045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301824042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a7a7e599fb1c4387a4538c28ead3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList: []
+  spawnRate: 
+  spawnsAtTreesDead: 
+  treesDead: 0
+  trees: []
+  isdead: 0
 --- !u!1 &315435711
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1118493739}
   - component: {fileID: 1118493738}
+  - component: {fileID: 1118493740}
   m_Layer: 0
   m_Name: tree_7 (2)
   m_TagString: SpawnTree
@@ -430,6 +449,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1118493740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118493737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a7a7e599fb1c4387a4538c28ead3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList: []
+  spawnRate: 
+  spawnsAtTreesDead: 
+  treesDead: 0
+  trees: []
+  isdead: 0
 --- !u!1 &1574928919
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753657446}
   - component: {fileID: 1753657445}
+  - component: {fileID: 1753657447}
   m_Layer: 0
   m_Name: tree_7 (4)
   m_TagString: SpawnTree
@@ -569,6 +606,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753657447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753657444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a7a7e599fb1c4387a4538c28ead3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList: []
+  spawnRate: 
+  spawnsAtTreesDead: 
+  treesDead: 0
+  trees: []
+  isdead: 0
 --- !u!1 &1907353285
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907353287}
   - component: {fileID: 1907353286}
+  - component: {fileID: 1907353288}
   m_Layer: 0
   m_Name: tree_7 (1)
   m_TagString: SpawnTree
@@ -643,6 +698,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907353288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907353285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a7a7e599fb1c4387a4538c28ead3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList: []
+  spawnRate: 
+  spawnsAtTreesDead: 
+  treesDead: 0
+  trees: []
+  isdead: 0
 --- !u!1 &2147023705
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2147023707}
   - component: {fileID: 2147023706}
+  - component: {fileID: 2147023708}
   m_Layer: 0
   m_Name: tree_7
   m_TagString: SpawnTree
@@ -717,3 +790,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2147023708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2147023705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a7a7e599fb1c4387a4538c28ead3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 1868336867798802, guid: c890ff36d8c816749b18afd5f420657e, type: 2}
+  - {fileID: 1334764345713054, guid: affa50eb4e2b23f40b4d490bf7241ff7, type: 2}
+  spawnRate: 500000001e000000
+  spawnsAtTreesDead: 0000000001000000
+  treesDead: 0
+  trees: []
+  isdead: 0
