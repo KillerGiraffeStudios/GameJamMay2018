@@ -24,28 +24,23 @@ public class WeatherManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        int changeChance = Random.Range(1, 1000);
+        if(changeChance == 50)
+        {
+            ChangeRain();
+        }
 	}
 
 
     /// <summary>
     /// Start rainning
     /// </summary>
-    void StartRain()
+    void ChangeRain()
     {
         var emission = this.particalSystem.emission;
-        emission.enabled = true;
+        emission.enabled = !emission.enabled;
     }
 
-
-    /// <summary>
-    /// Stop rainning
-    /// </summary>
-    void StopRain()
-    {
-        var emission = this.particalSystem.emission;
-        emission.enabled = false;
-    }
 
 
     /// <summary>
@@ -53,6 +48,7 @@ public class WeatherManager : MonoBehaviour {
     /// </summary>
     void SpawnTornado()
     {
+
         // Determine the starting wall position where 1 = top and go clockwise
         int wall = Random.Range(0, 4);
 
