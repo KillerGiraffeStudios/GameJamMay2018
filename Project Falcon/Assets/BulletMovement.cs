@@ -6,14 +6,12 @@ using GamepadInput;
 public class BulletMovement : MonoBehaviour {
 
     public float speed = 10;
-    private Rigidbody2D r_body;
     public GamePad.Index Player = GamePad.Index.One;
     public Transform bulletSpawn;
     public GameObject bulletPrefab;
 
     // Use this for initialization
     void Start () {
-        r_body = GetComponent<Rigidbody2D>();
     }
     bool shoot;
 	// Update is called once per frame
@@ -31,6 +29,6 @@ public class BulletMovement : MonoBehaviour {
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         var rotation = transform.eulerAngles.z * Mathf.Deg2Rad;
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation)*speed, Mathf.Sin(rotation)*speed);
-        Destroy(bullet, 20.0f);
+        Destroy(bullet, 5.0f);
     }
 }
