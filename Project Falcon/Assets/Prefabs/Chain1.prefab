@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   Player: 1
-  bulletSpawn: {fileID: 0}
+  bulletSpawn: {fileID: 4085122365545772}
   bulletPrefab: {fileID: 1721467623806072, guid: 2ce5d1b97127f5b40a45f721bc25bef2,
     type: 2}
 --- !u!114 &114703750511691358
