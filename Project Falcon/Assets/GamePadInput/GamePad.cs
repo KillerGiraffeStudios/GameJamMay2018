@@ -15,23 +15,84 @@ namespace GamepadInput
         public enum Trigger { LeftTrigger, RightTrigger }
         public enum Axis { LeftStick, RightStick, Dpad }
         public enum Index { Any, One, Two, Three, Four }
+        
 
         public static bool GetButtonDown(Button button, Index controlIndex)
         {
+            bool keyboard = false;
+            if(controlIndex == Index.One){
+                switch(button){
+                    case Button.A: 
+                        keyboard = Input.GetKeyDown(KeyCode.K);
+                        break;
+                    case Button.B:
+                        keyboard = Input.GetKeyDown(KeyCode.L);
+                        break;
+                    case Button.Y:
+                        keyboard = Input.GetKeyDown(KeyCode.I);
+                        break;
+                    case Button.X:
+                        keyboard = Input.GetKeyDown(KeyCode.J);
+                        break;
+                    default:
+                        keyboard = false;
+                        break;
+                }
+            }
             KeyCode code = GetKeycode(button, controlIndex);
-            return Input.GetKeyDown(code);
+            return Input.GetKeyDown(code) || keyboard;
         }
 
         public static bool GetButtonUp(Button button, Index controlIndex)
         {
+            bool keyboard = false;
+            if(controlIndex == Index.One){
+                switch(button){
+                    case Button.A: 
+                        keyboard = Input.GetKeyUp(KeyCode.K);
+                        break;
+                    case Button.B:
+                        keyboard = Input.GetKeyUp(KeyCode.L);
+                        break;
+                    case Button.Y:
+                        keyboard = Input.GetKeyUp(KeyCode.I);
+                        break;
+                    case Button.X:
+                        keyboard = Input.GetKeyUp(KeyCode.J);
+                        break;
+                    default:
+                        keyboard = false;
+                        break;
+                }
+            }
             KeyCode code = GetKeycode(button, controlIndex);
-            return Input.GetKeyUp(code);
+            return Input.GetKeyUp(code) || keyboard;
         }
 
         public static bool GetButton(Button button, Index controlIndex)
         {
+            bool keyboard = false;
+            if(controlIndex == Index.One){
+                switch(button){
+                    case Button.A: 
+                        keyboard = Input.GetKey(KeyCode.K);
+                        break;
+                    case Button.B:
+                        keyboard = Input.GetKey(KeyCode.L);
+                        break;
+                    case Button.Y:
+                        keyboard = Input.GetKey(KeyCode.I);
+                        break;
+                    case Button.X:
+                        keyboard = Input.GetKey(KeyCode.J);
+                        break;
+                    default:
+                        keyboard = false;
+                        break;
+                }
+            }
             KeyCode code = GetKeycode(button, controlIndex);
-            return Input.GetKey(code);
+            return Input.GetKey(code) || keyboard;
         }
 
         /// <summary>
