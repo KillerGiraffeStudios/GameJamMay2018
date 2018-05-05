@@ -19,7 +19,7 @@ public class MainMenuScript : MonoBehaviour {
 	void Update () {
         if (Input.anyKey)
         {
-           Debug.Log("Key pressed");
+ 
            StartCoroutine(ChangeTextColour());
         }
 	}
@@ -47,9 +47,10 @@ public class MainMenuScript : MonoBehaviour {
         foreach (Transform letter in redText.transform)
         {
             yield return new WaitForSeconds(0.25f);
-            Debug.Log("Starting Coroutine");
             StartCoroutine(FlipLetter(letter));
         }
+
+        StartGame();
     }
 
     /// <summary>
@@ -61,7 +62,6 @@ public class MainMenuScript : MonoBehaviour {
         yield return new WaitForSeconds(0.001f);
 
         letter.gameObject.SetActive(true);
-        Debug.Log("Set Text Active");
     }
 
 
