@@ -26,7 +26,7 @@ public class Tornado : MonoBehaviour {
 	void Start ()
     {
         // Generate directional speed
-        //this.GameObject.Vector3
+        //this.GameObject.getComponent<RidgidBody>();
 
         // Generate a rotation
 
