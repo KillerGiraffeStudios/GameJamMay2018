@@ -77,6 +77,6 @@ public class WeatherManager : MonoBehaviour {
         }
 
         // Instantiate tornado
-        GameObject newTornado = Instantiate(this.tornadoPrefab, new Vector3(positionX, positionY, 0));
+        //GameObject newTornado = Instantiate(this.tornadoPrefab, new Vector3(positionX, positionY, 0));
     }
 }
