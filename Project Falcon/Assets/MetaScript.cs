@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MetaScript : MonoBehaviour {
 	private static GameObject Meta;
+	private static GameObject Anchor;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +21,12 @@ public class MetaScript : MonoBehaviour {
 	}
 	public static MetaScript GetMetaScript(){
 		return GetMeta().GetComponent<MetaScript>();
+	}
+	public static GameObject GetAnchor(){
+		if(Anchor == null){
+			Anchor = GameObject.Find("anchor");
+		}
+		return Anchor;
 	}
 	
 	// TEMP
