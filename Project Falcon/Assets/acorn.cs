@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitDetection : MonoBehaviour {
+public class acorn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,13 +14,12 @@ public class HitDetection : MonoBehaviour {
 		
 	}
 
-
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag == "enemy")
+        if (coll.gameObject.tag == "anchor")
         {
             coll.gameObject.SendMessage("Damage");
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
