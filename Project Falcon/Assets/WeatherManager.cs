@@ -18,7 +18,7 @@ public class WeatherManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
-        this.player = GameObject.FindWithTag("Ancor");
+        this.player = GameObject.FindWithTag("anchor");
         this.SpawnTornado();
     }
 	
