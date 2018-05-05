@@ -6,7 +6,11 @@ TagManager:
   tags:
   - enemy
   - SpawnTree
+<<<<<<< HEAD
   - Tornado
+=======
+  - anchor
+>>>>>>> 5b0eff27f59eab63b553dc4c49c3f912bae7dcb0
   layers:
   - Default
   - TransparentFX
