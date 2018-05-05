@@ -53,7 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd4d8236ec382049876e826634af6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tornadoPrefab: {fileID: 0}
+  tornadoPrefab: {fileID: 1412043384950806, guid: ffbb66e11e2b8f1408b22708ddc704eb,
+    type: 2}
 --- !u!198 &198092712323832724
 ParticleSystem:
   m_ObjectHideFlags: 1
