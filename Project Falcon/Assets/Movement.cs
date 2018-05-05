@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour {
 
 		if(GamePad.GetButton(GamePad.Button.B, Player)){
 			r_body.AddForce(r_body.velocity * -4);
-		}else if(GamePad.GetButton(GamePad.Button.A,Player)){
+		}else{//} if(GamePad.GetButton(GamePad.Button.A,Player)){
 			r_body.AddForce(new Vector2(Mathf.Cos(rotation),Mathf.Sin(rotation)) * MetaScript.getAcceleration());
 		}
 		
