@@ -53,10 +53,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4811943790055352}
   - component: {fileID: 212009108774221716}
-  - component: {fileID: 114703750511691358}
+  - component: {fileID: 114220800370947712}
   - component: {fileID: 50236491554519086}
   - component: {fileID: 232847436959437644}
-  - component: {fileID: 114586032535337036}
+  - component: {fileID: 114773755268624414}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -308,7 +308,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &114586032535337036
+--- !u!114 &114220800370947712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -316,7 +316,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378980055151148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f18ce0f75e0be04fb266d2f433051fe, type: 3}
+  m_Script: {fileID: 11500000, guid: e25da8f908c38b042a1bc765b6906b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: 1
+--- !u!114 &114773755268624414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378980055151148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27099f91f4d5c4241982477004110709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
@@ -324,18 +336,6 @@ MonoBehaviour:
   bulletSpawn: {fileID: 4085122365545772}
   bulletPrefab: {fileID: 1721467623806072, guid: 2ce5d1b97127f5b40a45f721bc25bef2,
     type: 2}
---- !u!114 &114703750511691358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378980055151148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e728d0d8eacbdc34cbd47531e0c935cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: 1
 --- !u!212 &212009108774221716
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -370,7 +370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
