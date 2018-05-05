@@ -13,10 +13,15 @@ public class squirrel_AI : MonoBehaviour {
     public int speed = 2;
     public GameObject Bullet;
     private bool cooldown = false;
+    AudioSource shootingsound;
+
+    
     // Use this for initialization
     void Start()
     {
         Anchor = GameObject.FindGameObjectWithTag("anchor");
+        shootingsound = gameObject.GetComponentInChildren<AudioSource>();
+
 
     }
 
@@ -54,6 +59,10 @@ public class squirrel_AI : MonoBehaviour {
     void Shoot()
     {
         if (!cooldown) {
+            if(!shootingsound.isPlaying)
+            {
+                shootingsound.Play();
+            }
             var acornbullet = (GameObject)Instantiate(acorn, gameObject.transform.position + gameObject.transform.right*1, gameObject.transform.rotation);
             var rotation = transform.eulerAngles.z * Mathf.Deg2Rad;
             acornbullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation) * speed, Mathf.Sin(rotation) * speed);

@@ -23,9 +23,16 @@ public class BulletMovement : MonoBehaviour {
         }
     }
 
+
     //shoot function, spawns bullet and sets velocity.
     void Shoot()
     {
+        if(!gameObject.GetComponent<AudioSource>().isPlaying)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+        
+        
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         var rotation = transform.eulerAngles.z * Mathf.Deg2Rad;
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation)*speed, Mathf.Sin(rotation)*speed);
