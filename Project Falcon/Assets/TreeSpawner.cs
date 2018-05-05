@@ -21,9 +21,13 @@ public class TreeSpawner : MonoBehaviour {
             numEnemiesSpawned[i] = 0;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void FixedUpdate() {
+        tick++;
+    }
+
+    // Update is called once per frame
+    void Update () {
         int newTreesDead = 0;
         //check how many trees are dead
         foreach(GameObject tree in trees) {
@@ -33,14 +37,12 @@ public class TreeSpawner : MonoBehaviour {
             }
         }
         treesDead = newTreesDead;
-        tick++;
         /*
          *For each enemy check to see if the correct number of trees have died to spawn them and then check 
          * to see if the correct number of ticks have passed to spawn the creature
          */
         for(int i = 0; i < enemyList.Length; i = i + 1) {
             if (spawnsAtTreesDead[i] <= treesDead) {
-                Debug.Log("tick: " + tick);
                 if (Mathf.Floor(tick/spawnRate[i]) > numEnemiesSpawned[i]) {
                     Spawn(enemyList[i]);
                     numEnemiesSpawned[i] = numEnemiesSpawned[i] + 1;
@@ -51,6 +53,9 @@ public class TreeSpawner : MonoBehaviour {
 	}
 
     void Spawn(GameObject enemy) {
-        Instantiate(enemy);
+        float randY = Random.Range(-10, 10);
+        float randX = Random.Range(-10, 10);
+        
+        Instantiate(enemy, new Vector3(this.transform.position.x + randX, this.transform.position.y + randY, this.transform.position.z), Quaternion.identity);
     }
 }
