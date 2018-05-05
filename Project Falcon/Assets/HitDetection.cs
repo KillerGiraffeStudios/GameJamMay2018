@@ -20,7 +20,7 @@ public class HitDetection : MonoBehaviour {
         if(coll.gameObject.tag == "enemy")
         {
             coll.gameObject.SendMessage("Damage");
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

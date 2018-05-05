@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MetaScript : MonoBehaviour {
 	private static GameObject Meta;
+	private static GameObject Anchor;
+
+	
+	[Range(1,4)]public int playerCount = 1;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,6 +25,12 @@ public class MetaScript : MonoBehaviour {
 	public static MetaScript GetMetaScript(){
 		return GetMeta().GetComponent<MetaScript>();
 	}
+	public static GameObject GetAnchor(){
+		if(Anchor == null){
+			Anchor = GameObject.Find("anchor");
+		}
+		return Anchor;
+	}
 	
 	// TEMP
 	public float maxSpeed = 2.8f;
@@ -37,4 +47,5 @@ public class MetaScript : MonoBehaviour {
 	public static float getTurnSpeed(){
 		return GetMetaScript().turnSpeed;
 	}
+
 }
