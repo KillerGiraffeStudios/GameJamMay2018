@@ -5,6 +5,9 @@ using UnityEngine;
 public class MetaScript : MonoBehaviour {
 	private static GameObject Meta;
 	private static GameObject Anchor;
+
+	
+	[Range(1,4)]public int playerCount = 1;
 	// Use this for initialization
 	void Start () {
 		
@@ -44,4 +47,5 @@ public class MetaScript : MonoBehaviour {
 	public static float getTurnSpeed(){
 		return GetMetaScript().turnSpeed;
 	}
+
 }
