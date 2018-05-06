@@ -964,6 +964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1384053637}
+  - {fileID: 1345410243}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1351,6 +1352,74 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d4dbb9b9938fb148a6ec08928b46d2b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1345410242
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385884286}
+    m_Modifications:
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532593173879664, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212108072877502054, guid: 93a16c1172d08394894aa026c46ef87c,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532593173879664, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+      propertyPath: m_TagString
+      value: Explosion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 93a16c1172d08394894aa026c46ef87c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1345410243 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1345410242}
 --- !u!1 &1359259186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1555,7 @@ GameObject:
   - component: {fileID: 1384053638}
   m_Layer: 0
   m_Name: New Sprite
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2136,12 +2205,12 @@ Prefab:
     - target: {fileID: 114467689428173062, guid: 264e0e7aa1932964f94687d9cfe4e45e,
         type: 2}
       propertyPath: spawnProbability
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114467689428173062, guid: 264e0e7aa1932964f94687d9cfe4e45e,
         type: 2}
       propertyPath: rainProbability
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 264e0e7aa1932964f94687d9cfe4e45e, type: 2}

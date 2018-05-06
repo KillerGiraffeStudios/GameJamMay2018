@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 1
+  UI: {fileID: 0}
 --- !u!114 &114633334217179872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinDist: 0.5
   MaxDist: 0.5
-  speed: 2
+  speed: 3
 --- !u!212 &212300377427413338
 SpriteRenderer:
   m_ObjectHideFlags: 1
