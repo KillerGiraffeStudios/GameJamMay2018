@@ -29,10 +29,15 @@ public class Health : MonoBehaviour {
     public virtual void Kill()
     {
         if(CompareTag("enemy")){
+            Debug.Log(gameObject.name);
             MetaScript.GetStat().addKill(tag);
         }
         Destroy(gameObject);
-        SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
+        if (CompareTag("anchor"))
+        {
+            SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
+        }
+        
     }
 }
 

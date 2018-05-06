@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 329531909}
   - component: {fileID: 329531908}
+  - component: {fileID: 329531910}
   m_Layer: 0
   m_Name: Meta
   m_TagString: Untagged
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d377513d58f43b4087d519ebfa72aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCount: 4
+  playerCount: 1
   maxSpeed: 5
   acceleration: 12
   turnSpeed: 4
@@ -266,6 +267,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329531910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 329531907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0d511812e6fd241b1cb6f9f4387112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killEvent: []
 --- !u!1001 &368579832
 Prefab:
   m_ObjectHideFlags: 0

@@ -32,12 +32,7 @@ public class rabbit_AI : MonoBehaviour {
 
 
 
-            if (Vector3.Distance(transform.position, Anchor.transform.position) <= MaxDist)
-            {
-                Anchor.SendMessage("Damage");
-                gameObject.SendMessage("Kill");
-            }
-
+            
         }
 
     void OnCollisionEnter2D(Collision2D coll)
