@@ -14,10 +14,11 @@ public class BulletMovement : MonoBehaviour {
     void Start () {
     }
     bool shoot;
+    bool canShoot = true;
 	// Update is called once per frame
 	void Update () {
         shoot = GamePad.GetButtonDown(GamePad.Button.A, Player);
-        if(shoot)
+        if(shoot && canShoot)
         {
             Shoot();
         }
@@ -34,10 +35,16 @@ public class BulletMovement : MonoBehaviour {
 
         float spawnSpeedX = bulletSpawn.parent.gameObject.GetComponent<Rigidbody2D>().velocity.x;
         float spawnSpeedY = bulletSpawn.parent.gameObject.GetComponent<Rigidbody2D>().velocity.y;
-
+        canShoot = false;
+        Invoke("enableShoot",0.2f);
+        
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         var rotation = transform.eulerAngles.z * Mathf.Deg2Rad;
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation)*speed + spawnSpeedX, Mathf.Sin(rotation)*speed + spawnSpeedY);
         Destroy(bullet, 5.0f);
+    }
+
+    void enableShoot(){
+        canShoot = true;
     }
 }
