@@ -217,7 +217,7 @@ MonoBehaviour:
   oakTreesBurned: {fileID: 163131832}
   rabbitsSlaughtered: {fileID: 660035533}
   catsKilled: {fileID: 1736683320}
-  squirrelsMuredered: {fileID: 1588095356}
+  squirrelsMurdered: {fileID: 1588095356}
   bearsIncinerated: {fileID: 509400986}
   mainMenuText: {fileID: 1580223676}
   playAgainText: {fileID: 474904888}

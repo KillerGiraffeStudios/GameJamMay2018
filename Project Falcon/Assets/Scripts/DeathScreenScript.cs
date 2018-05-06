@@ -9,7 +9,7 @@ public class DeathScreenScript : MonoBehaviour {
     public Text oakTreesBurned;
     public Text rabbitsSlaughtered;
     public Text catsKilled;
-    public Text squirrelsMuredered;
+    public Text squirrelsMurdered;
     public Text bearsIncinerated;
 
     [SerializeField]
@@ -23,6 +23,7 @@ public class DeathScreenScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        SetScoreValues(GlobalValues.oakTreesKilled, GlobalValues.rabbitsKilled, GlobalValues.catsKilled, GlobalValues.squirrelsKilled, GlobalValues.bearsKilled);
         curSelected = playAgainText;
         InvokeRepeating("Blink", textBlinkTime, textBlinkTime);
 	}
@@ -61,7 +62,6 @@ public class DeathScreenScript : MonoBehaviour {
     public void RestartGame()
     {
         Debug.Log("Restart the Game");
-        // TODO Pass the player count and difficulty to the scene
         SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 
@@ -83,5 +83,6 @@ public class DeathScreenScript : MonoBehaviour {
         rabbitsSlaughtered.text = rabbits.ToString();
         catsKilled.text = cats.ToString();
         bearsIncinerated.text = bears.ToString();
+        squirrelsMurdered.text = squirrels.ToString();
     }
 }
