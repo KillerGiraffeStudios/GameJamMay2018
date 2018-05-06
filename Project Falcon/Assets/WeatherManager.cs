@@ -83,23 +83,23 @@ public class WeatherManager : MonoBehaviour {
         
         if (wall == 1)
         {
-            positionX = Random.Range(-101, 100);
-            positionY = 100;
+            positionX = Random.Range(0, 200);
+            positionY = 200;
         }
         else if (wall == 2)
         {
-            positionY = Random.Range(-101, 100);
-            positionX = 100;
+            positionY = Random.Range(0, 200);
+            positionX = 200;
         }
         else if (wall == 3)
         {
-            positionX = Random.Range(-101, 100);
-            positionY = -100;
+            positionX = Random.Range(0, 200);
+            positionY = 0;
         }
         else
         {
-            positionY = Random.Range(-101, 100);
-            positionX = -100;
+            positionY = Random.Range(0, 200);
+            positionX = 0;
         }
 
         // Determine direction of the tornado
@@ -122,12 +122,12 @@ public class WeatherManager : MonoBehaviour {
         float direction = 0;
 
         // If the position of the tornado is on the left wall
-        if(currentX <= -100)
+        if(currentX <= 1)
         {
             direction = 10;
         }
         // If the position is on the right wall
-        else if(currentX >= 100)
+        else if(currentX >= 200)
         {
             direction = -10;
         }
@@ -150,11 +150,11 @@ public class WeatherManager : MonoBehaviour {
         float direction = 0;
 
         // If the position of the tornado is on the bottom wall
-        if (currentY <= -100)
+        if (currentY <= 1)
         {
             direction = 10;
         }
-        else if (currentY >= 100)
+        else if (currentY >= 200)
         {
             direction = -10;
         }
