@@ -31,6 +31,7 @@ public class PCG : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        difficulty = GlobalValues.difficulty;
         map = new bool[arrayLengthx, arrayLengthy];
         initialiseMap();
         for (int i = 0; i < numSteps; i++)

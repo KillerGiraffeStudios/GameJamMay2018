@@ -11,7 +11,7 @@ public class MetaScript : MonoBehaviour {
 	[Range(1,4)]public int playerCount = 1;
 	// Use this for initialization
 	void Start () {
-		
+        playerCount = GlobalValues.numPlayers;
 	}
 	
 	// Update is called once per frame

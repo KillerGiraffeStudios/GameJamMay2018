@@ -41,8 +41,6 @@ public class MainMenuScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Debug.Log("Timer: " + textColourTimer);
-
         Reset();
 
         if (textColourTimer <= 0)
@@ -146,7 +144,6 @@ public class MainMenuScript : MonoBehaviour {
 
             int next = difficultiesTexts.IndexOf(currentActive) + 1;
 
-            Debug.Log("Next: " + next);
 
             if (next >= difficultiesTexts.Count)
             {
@@ -192,7 +189,6 @@ public class MainMenuScript : MonoBehaviour {
                 prev = difficultiesTexts.Count - 1;
             }
 
-            Debug.Log("Prev: " + prev);
 
             switch (currentActive.name)
             {
@@ -382,6 +378,9 @@ public class MainMenuScript : MonoBehaviour {
     void StartGame(int numberOfPlayers, int difficulty)
     {
         // Start the game scene here
+        Debug.Log(numberOfPlayers);
+        GlobalValues.numPlayers = numberOfPlayers;
+        GlobalValues.difficulty = difficulty;
         SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
         // TODO Pass the number of players and difficulty to the meta and pcg scripts
     }
