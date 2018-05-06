@@ -187,3 +187,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5a7f3e2251d6bd748be11da514a7b1a5, type: 3}
   - {fileID: 8300000, guid: 173705b6c69a15942906861d58161355, type: 3}
   - {fileID: 8300000, guid: 5006ee8f54dfc154c98af925f89ec178, type: 3}
+  startAudio: {fileID: 8300000, guid: 5b0a56824f973aa4ab2013caf2815037, type: 3}
