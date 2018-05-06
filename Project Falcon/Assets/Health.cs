@@ -47,13 +47,23 @@ public class Health : MonoBehaviour {
             Debug.Log(gameObject.name);
             MetaScript.GetStat().addKill(gameObject.name);
             GlobalValues.numCreatures--;
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        //InvokeDestroy(gameObject);
         if (CompareTag("anchor"))
         {
-            SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
+            GameObject ship = GameObject.FindWithTag("Ship");
+            GameObject ex = GameObject.FindWithTag("Explosion");
+            ship.SetActive(false);
+            ex.SetActive(true);
+            Invoke("EndGame", 2.0f);
         }
         
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }
 }
 
