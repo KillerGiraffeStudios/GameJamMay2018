@@ -15,8 +15,12 @@ public class Tornado : MonoBehaviour {
     [SerializeField]
     private float rotationSpeed;
 
+    // Force of the tornado
+    [SerializeField]
+    private float force;
+
     // Is the player caught in the tornado
-    private bool damagePlayer = false;
+    // private bool damagePlayer = false;
 
     // Reference to the player
     private GameObject player;
@@ -40,10 +44,13 @@ public class Tornado : MonoBehaviour {
         TornadoMovement();
 
         // Player takes damage if they are in the tornado
+        /*
         if (this.damagePlayer)
         {
             this.player.SendMessage("Damage");
-        }
+        }*/
+
+
     }
 
 
@@ -87,6 +94,23 @@ public class Tornado : MonoBehaviour {
 
 
     /// <summary>
+    /// Pull in an object
+    /// </summary>
+    /// <param name="unfortunateSoul"></param>
+    void TornadoForce(GameObject unfortunateSoul)
+    {
+        // Get X distance
+        float xDistance = unfortunateSoul.transform.position.x - this.gameObject.transform.position.x;
+
+        // Get Y distance
+        float yDistance = unfortunateSoul.transform.position.y - this.gameObject.transform.position.y;
+
+        // Pull towards tornado
+        unfortunateSoul.GetComponent<Rigidbody2D>().AddForce(new Vector2(10 * (1 / xDistance), 10 * (1 / yDistance)));
+    }
+
+    /*
+    /// <summary>
     /// OnCollisionEnter() will be called whenever an object collieds with the tornado and then 
     /// call the correct function.
     /// </summary>
@@ -99,5 +123,20 @@ public class Tornado : MonoBehaviour {
             this.player = obj.gameObject;
             this.damagePlayer = true;
         }
+    }*/
+
+    
+    /// <summary>
+    /// Throw anything in the tornado!
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player"  || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
+        {
+            TornadoForce(collision.gameObject);
+        }
     }
+
+    
 }
