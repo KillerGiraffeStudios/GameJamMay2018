@@ -8,7 +8,7 @@ public class healPickup : MonoBehaviour {
         if (other.gameObject.tag == "anchor") {
             Health anchorHP = other.gameObject.gameObject.GetComponent<Health>();
             anchorHP.currentHealth = anchorHP.currentHealth + anchorHP.maxHealth;
-            destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
