@@ -61,6 +61,7 @@ public class DeathScreenScript : MonoBehaviour {
     public void RestartGame()
     {
         Debug.Log("Restart the Game");
+        SceneManager.LoadScene("Will's Cumulation Scene", LoadSceneMode.Single);
     }
 
     public void MainMenu()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 
@@ -376,5 +377,6 @@ public class MainMenuScript : MonoBehaviour {
     void StartGame(int numberOfPlayers, int difficulty)
     {
         // Start the game scene here
+        SceneManager.LoadScene("Will's Cumulation Scene", LoadSceneMode.Single);
     }
 }
