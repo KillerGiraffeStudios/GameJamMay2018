@@ -25,6 +25,29 @@ public class StatEvents : MonoBehaviour {
 	public void addKill(string key){
 		if(killCount.ContainsKey(key)){
 			killCount[key] ++;
+            Debug.Log("Key: " + key);
+
+            key = key.Replace("(Clone)", "").Trim();
+
+            switch (key)
+            {
+                case "rabbit":
+                    GlobalValues.rabbitsKilled += 1;
+                    break;
+
+                case "squirrel":
+                    GlobalValues.squirrelsKilled += 1;
+                    break;
+
+                case "bear":
+                    GlobalValues.bearsKilled += 1;
+                    break;
+
+                case "flying cat":
+                    GlobalValues.catsKilled += 1;
+                    break;
+            }
+
 		}else{
 			killCount.Add(key,1);
 		}

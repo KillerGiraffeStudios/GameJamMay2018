@@ -10,6 +10,7 @@ public class SpawnTreeHealth : Health {
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         this.gameObject.GetComponent<TreeSpawner>().SetDead();
+        GlobalValues.oakTreesKilled += 1;
     }
     void OnTriggerEnter2D(Collider2D other) {
         if(other.name == "bullet(Clone)") {
