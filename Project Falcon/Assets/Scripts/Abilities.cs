@@ -8,10 +8,13 @@ public class Abilities : MonoBehaviour {
 	private int curEnergy = 1000;
 	private Rigidbody2D r_body;
 	private BarScript energyBar;
+	public AudioClip jets;
+	public AudioSource jetSource;
 	// Use this for initialization
 	void Start () {
 		r_body = GetComponent<Rigidbody2D>();
 		energyBar = GameObject.Find("Energy"+(int)GetComponent<Movement>().Player).GetComponent<BarScript>();
+		jetSource.clip = jets;
 	}
 	
 	int brakeCost = 10;
@@ -31,11 +34,20 @@ public class Abilities : MonoBehaviour {
 	int boostCost = 20;
 	public bool boost(GamePad.Index player){
 		if(curEnergy >= boostCost){
-			if(GamePad.GetButton(GamePad.Button.X, player) && !locked){
-				curEnergy -= boostCost;
-				return true;
+			if(!locked){
+				if(GamePad.GetButtonDown(GamePad.Button.X, player)){
+					jetSource.Play();
+				}
+				if(GamePad.GetButtonUp(GamePad.Button.X, player)){
+					jetSource.Stop();
+				}
+				if(GamePad.GetButton(GamePad.Button.X, player)){
+					curEnergy -= boostCost;
+					return true;
+				}
 			}
 		}else{
+			jetSource.Stop();
 			lockEnergy();
 		}
 		return false;
