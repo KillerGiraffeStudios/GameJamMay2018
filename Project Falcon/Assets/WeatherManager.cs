@@ -27,6 +27,7 @@ public class WeatherManager : MonoBehaviour {
     void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
         this.player = GameObject.FindWithTag("anchor");
+        InvokeRepeating("SpawnTornado", 2.0f, 10.0f);
     }
 	
 	// Update is called once per frame
