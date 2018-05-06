@@ -27,12 +27,12 @@ public class WeatherManager : MonoBehaviour {
     void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
         this.player = GameObject.FindWithTag("anchor");
-        this.SpawnTornado();
+        //this.SpawnTornado();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        ChanceOfRain();
+        //ChanceOfRain();
         ChanceOfSpawningTornado();
 	}
 
@@ -42,7 +42,7 @@ public class WeatherManager : MonoBehaviour {
     /// </summary>
     void ChanceOfRain()
     {
-        int changeChance = Random.Range(1, rainProbability);
+        int changeChance = Random.Range(1, rainProbability+1);
         if (changeChance == rainProbability)
         {
             var emission = this.particalSystem.emission;
