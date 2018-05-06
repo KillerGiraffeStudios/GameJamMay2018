@@ -9,7 +9,7 @@ public class SpawnTreeHealth : Health {
     public GameObject Guardian;
 
     void Start() {
-        currentHealth = maxHealth * GlobalValues.numPlayers;
+        currentHealth = maxHealth * (GlobalValues.numPlayers/2);
     }
 
     public override void Kill() {
@@ -20,7 +20,7 @@ public class SpawnTreeHealth : Health {
         if (Random.Range(1, 5) <= 2) {
             Instantiate(healPick, this.transform.position, this.transform.rotation);
         }
-        for (int i = 0; i < GlobalValues.oakTreesKilled * GlobalValues.numPlayers; i++) {
+        for (int i = 0; i < (int)(GlobalValues.oakTreesKilled * GlobalValues.difficulty * (GlobalValues.numPlayers/4) * 0.25f); i++) {
             int rand = Mathf.FloorToInt(Random.Range(1f, 4.9f));
             if (rand == 1) {
                 float randX = Random.Range(-5, 5);
