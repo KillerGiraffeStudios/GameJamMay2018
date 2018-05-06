@@ -32,7 +32,7 @@ public class bear_ai : MonoBehaviour {
             Anchor.SendMessage("Damage");
             Anchor.SendMessage("Damage");
             Anchor.SendMessage("Damage");
-            gameObject.SendMessage("Kill");
+            Destroy(gameObject);
         }
     }
 }

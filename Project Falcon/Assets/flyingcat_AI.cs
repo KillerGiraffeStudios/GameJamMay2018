@@ -41,7 +41,7 @@ public class flyingcat_AI : MonoBehaviour {
         if (Vector3.Distance(transform.position, Anchor.transform.position) <= MaxDist)
         {
             Anchor.SendMessage("Damage");
-            gameObject.SendMessage("Kill");
+            Destroy(gameObject);
         }
     }
 
