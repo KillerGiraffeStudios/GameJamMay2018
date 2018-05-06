@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class GlobalValues {
 
+    public static int numCreatures = 0;
+
     private static int _difficulty;
     public static int difficulty
     {

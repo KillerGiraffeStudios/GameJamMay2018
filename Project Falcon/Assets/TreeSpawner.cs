@@ -76,7 +76,9 @@ public class TreeSpawner : MonoBehaviour {
     void Spawn(GameObject enemy) {
         float randY = Random.Range(-10, 10);
         float randX = Random.Range(-10, 10);
-        
-        Instantiate(enemy, new Vector3(this.transform.position.x + randX, this.transform.position.y + randY, this.transform.position.z), Quaternion.identity);
+        if(GlobalValues.numCreatures < 250) {
+            Instantiate(enemy, new Vector3(this.transform.position.x + randX, this.transform.position.y + randY, this.transform.position.z), Quaternion.identity);
+            GlobalValues.numCreatures++;
+        }
     }
 }
