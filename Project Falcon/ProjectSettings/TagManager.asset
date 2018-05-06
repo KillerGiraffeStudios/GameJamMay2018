@@ -8,6 +8,7 @@ TagManager:
   - SpawnTree
   - anchor
   - Tornado
+  - Explosion
   layers:
   - Default
   - TransparentFX
