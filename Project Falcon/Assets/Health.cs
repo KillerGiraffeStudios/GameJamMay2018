@@ -6,20 +6,19 @@ public class Health : MonoBehaviour {
 
     public int maxHealth;
     public int currentHealth;
+    public BarScript UI = null;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        currentHealth = maxHealth;
 	}
 
     void Damage()
     {
         currentHealth--;
+        if(UI != null){
+            UI.setBar(currentHealth*1f/maxHealth);
+        }
         if(currentHealth <= 0)
         {
             Kill();
@@ -28,6 +27,9 @@ public class Health : MonoBehaviour {
 
     void Kill()
     {
+        if(CompareTag("enemy")){
+            MetaScript.GetStat().addKill(tag);
+        }
         Destroy(gameObject);
     }
 }
