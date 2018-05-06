@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreeSpawner : MonoBehaviour {
 
@@ -51,6 +52,19 @@ public class TreeSpawner : MonoBehaviour {
         }
 		
 	}
+    public void SetDead() {
+        isdead = true;
+        int newTreesDead = 0;
+        foreach (GameObject tree in trees) {
+
+            if ((tree.GetComponent<TreeSpawner>().isdead)) {
+                newTreesDead++;
+            }
+        }
+        if (newTreesDead >= trees.Length) {
+            SceneManager.LoadScene("WinScene");
+        }
+    }
 
     void Spawn(GameObject enemy) {
         float randY = Random.Range(-10, 10);
