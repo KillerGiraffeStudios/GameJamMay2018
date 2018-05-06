@@ -33,13 +33,16 @@ public class Tornado : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        // Check if tornado needs to be deleted
+        CheckDespawnLocation();
+
         // Move tornado
         TornadoMovement();
 
         // Player takes damage if they are in the tornado
         if (this.damagePlayer)
         {
-            this.player.SendMessage("TakeDamage", 1);
+            this.player.SendMessage("Damage");
         }
     }
 
@@ -67,6 +70,19 @@ public class Tornado : MonoBehaviour {
 
         // Generate a rotation
         this.transform.Rotate(new Vector3(0, 0, 1), this.rotationSpeed * Time.deltaTime);
+    }
+
+
+    /// <summary>
+    /// Will check if the tornado is out of range and needs to despawn
+    /// </summary>
+    void CheckDespawnLocation()
+    {
+        if(this.gameObject.transform.position.x < - 110.0f || this.gameObject.transform.position.x > 110.0f ||
+            this.gameObject.transform.position.y < -110.0f || this.gameObject.transform.position.y > 110.0f)
+        {
+            Destroy(this.gameObject, 5.0f);
+        }
     }
 
 

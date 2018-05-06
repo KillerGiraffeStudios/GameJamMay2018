@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4705560311364356}
   - component: {fileID: 212380082911952392}
+  - component: {fileID: 114552613751581570}
   m_Layer: 0
   m_Name: Nest_Oak
-  m_TagString: Untagged
+  m_TagString: SpawnTree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,6 +41,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114552613751581570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868336867798802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005a7a7e599fb1c4387a4538c28ead3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 1899744424197776, guid: 31f3b823fab8c694fbae3ae130b368bf, type: 2}
+  - {fileID: 1530842871163204, guid: 24d8f15603021344facb1784e4477161, type: 2}
+  spawnRate: 780000002c010000
+  spawnsAtTreesDead: 0000000000000000
+  treesDead: 0
+  trees: []
+  isdead: 0
 --- !u!212 &212380082911952392
 SpriteRenderer:
   m_ObjectHideFlags: 1

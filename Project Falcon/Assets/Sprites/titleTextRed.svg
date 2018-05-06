@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1600"
+   height="900"
+   viewBox="0 0 423.33332 238.12501"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="titleTextRed.svg"
+   inkscape:export-filename="C:\Users\Kyle\Documents\projects\GameJamMay2018\Project Falcon\Assets\Sprites\titleTextRed.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-184.26126"
+     inkscape:cy="274.28571"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-58.874983)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3713"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#008000;fill-opacity:1;stroke:none"
+       transform="matrix(1.2769965,0,0,1.2769965,-187.96008,-167.01277)"><flowRegion
+         id="flowRegion3715"
+         style="text-align:start;text-anchor:start;fill:#008000"><rect
+           id="rect3717"
+           width="1248.5714"
+           height="440"
+           x="151.42857"
+           y="174.28572"
+           style="text-align:start;text-anchor:start;fill:#008000" /></flowRegion><flowPara
+         id="flowPara3719"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'AR DARLING';-inkscape-font-specification:'AR DARLING';text-align:start;text-anchor:start;fill:#d40000">F O R C E </flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'AR DARLING';-inkscape-font-specification:'AR DARLING';text-align:start;text-anchor:start;fill:#d40000"
+         id="flowPara3721">O F </flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'AR DARLING';-inkscape-font-specification:'AR DARLING';text-align:start;text-anchor:start;fill:#d40000"
+         id="flowPara3723">N A T U R E</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3750"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,0,58.874983)"><flowRegion
+         id="flowRegion3752"><rect
+           id="rect3754"
+           width="225.71428"
+           height="85.714287"
+           x="394.28571"
+           y="108.57143" /></flowRegion><flowPara
+         id="flowPara3756" /></flowRoot>  </g>
+</svg>

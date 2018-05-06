@@ -14,9 +14,17 @@ public class WeatherManager : MonoBehaviour {
     // Reference to the players
     private GameObject player;
 
+    // Probability of creating a tornado (1/variable)
+    [SerializeField]
+    private int spawnProbability;
 
-	// Use this for initialization
-	void Start () {
+    // Probability of creating a tornado (1/variable)
+    [SerializeField]
+    private int rainProbability;
+
+
+    // Use this for initialization
+    void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
         this.player = GameObject.FindWithTag("anchor");
         this.SpawnTornado();
@@ -24,28 +32,36 @@ public class WeatherManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        ChanceOfRain();
 	}
 
 
     /// <summary>
-    /// Start rainning
+    /// Probability of changing the weather occurs here
     /// </summary>
-    void StartRain()
+    void ChanceOfRain()
     {
-        var emission = this.particalSystem.emission;
-        emission.enabled = true;
+        int changeChance = Random.Range(1, rainProbability);
+        if (changeChance == rainProbability)
+        {
+            var emission = this.particalSystem.emission;
+            emission.enabled = !emission.enabled;
+        }
     }
 
 
     /// <summary>
-    /// Stop rainning
+    /// Determines the chance of spawning a tornado.
     /// </summary>
-    void StopRain()
+    void ChanceOfSpawningTornado()
     {
-        var emission = this.particalSystem.emission;
-        emission.enabled = false;
+        int spawnChance = Random.Range(1, spawnProbability);
+        if (changeChance == spawnProbability)
+        {
+            SpawnTornado();
+        }
     }
+
 
 
     /// <summary>
@@ -53,6 +69,7 @@ public class WeatherManager : MonoBehaviour {
     /// </summary>
     void SpawnTornado()
     {
+
         // Determine the starting wall position where 1 = top and go clockwise
         int wall = Random.Range(0, 4);
 
