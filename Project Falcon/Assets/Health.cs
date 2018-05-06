@@ -32,6 +32,7 @@ public class Health : MonoBehaviour {
             MetaScript.GetStat().addKill(tag);
         }
         Destroy(gameObject);
+        // TODO: Pass kill counts to death script
         SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }
 }

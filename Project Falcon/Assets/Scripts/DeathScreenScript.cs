@@ -61,6 +61,7 @@ public class DeathScreenScript : MonoBehaviour {
     public void RestartGame()
     {
         Debug.Log("Restart the Game");
+        // TODO Pass the player count and difficulty to the scene
         SceneManager.LoadScene("Will's Cumulation Scene", LoadSceneMode.Single);
     }
 

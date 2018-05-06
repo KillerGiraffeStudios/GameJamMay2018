@@ -378,5 +378,6 @@ public class MainMenuScript : MonoBehaviour {
     {
         // Start the game scene here
         SceneManager.LoadScene("Will's Cumulation Scene", LoadSceneMode.Single);
+        // TODO Pass the number of players and difficulty to the meta and pcg scripts
     }
 }
