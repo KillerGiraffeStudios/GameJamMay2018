@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 
@@ -93,6 +94,11 @@ public class MainMenuScript : MonoBehaviour {
 
             canChangeDifficulty = false;
             difficultyTimer = 0.25f;
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            StartGame(numberOfPlayers, difficulty);
         }
 
 	}
@@ -376,5 +382,7 @@ public class MainMenuScript : MonoBehaviour {
     void StartGame(int numberOfPlayers, int difficulty)
     {
         // Start the game scene here
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+        // TODO Pass the number of players and difficulty to the meta and pcg scripts
     }
 }

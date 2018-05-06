@@ -15,8 +15,12 @@ public class Tornado : MonoBehaviour {
     [SerializeField]
     private float rotationSpeed;
 
+    // Force of the tornado
+    [SerializeField]
+    private float force;
+
     // Is the player caught in the tornado
-    private bool damagePlayer = false;
+    // private bool damagePlayer = false;
 
     // Reference to the player
     private GameObject player;
@@ -40,10 +44,13 @@ public class Tornado : MonoBehaviour {
         TornadoMovement();
 
         // Player takes damage if they are in the tornado
+        /*
         if (this.damagePlayer)
         {
             this.player.SendMessage("Damage");
-        }
+        }*/
+
+
     }
 
 
@@ -87,17 +94,34 @@ public class Tornado : MonoBehaviour {
 
 
     /// <summary>
-    /// OnCollisionEnter() will be called whenever an object collieds with the tornado and then 
-    /// call the correct function.
+    /// Pull in an object
     /// </summary>
-    /// <param name="obj"></param>
-    void OnCollisionEnter(Collision obj)
+    /// <param name="unfortunateSoul"></param>
+    void TornadoForce(GameObject unfortunateSoul)
     {
-        // If we collied with the players, refrence them and start dealing damage
-        if (obj.gameObject.tag == "Ship")
+        // Get X distance
+        float xDistance = unfortunateSoul.transform.position.x - this.gameObject.transform.position.x;
+
+        // Get Y distance
+        float yDistance = unfortunateSoul.transform.position.y - this.gameObject.transform.position.y;
+
+        // Pull towards tornado
+        unfortunateSoul.GetComponent<Rigidbody2D>().AddForce(new Vector2(this.force * (1 / xDistance), this.force * (1 / yDistance)));
+        print("Tornado force applied.");
+    }
+
+    
+    /// <summary>
+    /// Throw anything in the tornado!
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        print("Trigger stay activated");
+        if(collision.gameObject.tag == "Player"  || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
         {
-            this.player = obj.gameObject;
-            this.damagePlayer = true;
+            TornadoForce(collision.gameObject);
         }
     }
+
 }
