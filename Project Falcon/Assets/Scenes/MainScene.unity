@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,6 +514,12 @@ Prefab:
       propertyPath: normalSprite
       value: 
       objectReference: {fileID: 21300000, guid: 1d42186f42cc9c44b830408cd10f3a6f,
+        type: 3}
+    - target: {fileID: 114220800370947712, guid: e7ef319304cec82448aa75aeb665a45f,
+        type: 2}
+      propertyPath: brakeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f7f95656124b2d64ab48b6f9e9e43839,
         type: 3}
     m_RemovedComponents:
     - {fileID: 212009108774221716, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
@@ -1872,6 +1878,12 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 6cbbe4c3f3fab1f428176998ba7790b9,
         type: 3}
+    - target: {fileID: 114220800370947712, guid: e7ef319304cec82448aa75aeb665a45f,
+        type: 2}
+      propertyPath: brakeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0da748fa000e7c469b2bf21d1dc35b0,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 212009108774221716, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
@@ -2623,6 +2635,12 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bc81efaf4a1553a4298311c50b813482,
         type: 3}
+    - target: {fileID: 114220800370947712, guid: e7ef319304cec82448aa75aeb665a45f,
+        type: 2}
+      propertyPath: brakeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5959a91fc7a88364f809bb21ce34865a,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 212009108774221716, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
@@ -2792,6 +2810,12 @@ Prefab:
       propertyPath: normalSprite
       value: 
       objectReference: {fileID: 21300000, guid: 1bd149124a6b1124b846075dc53a46cd,
+        type: 3}
+    - target: {fileID: 114220800370947712, guid: e7ef319304cec82448aa75aeb665a45f,
+        type: 2}
+      propertyPath: brakeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bece31fb47e96cd4c901ca3aa059c52f,
         type: 3}
     m_RemovedComponents:
     - {fileID: 212009108774221716, guid: e7ef319304cec82448aa75aeb665a45f, type: 2}
