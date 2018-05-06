@@ -14,9 +14,17 @@ public class WeatherManager : MonoBehaviour {
     // Reference to the players
     private GameObject player;
 
+    // Probability of creating a tornado (1/variable)
+    [SerializeField]
+    private int spawnProbability;
 
-	// Use this for initialization
-	void Start () {
+    // Probability of creating a tornado (1/variable)
+    [SerializeField]
+    private int rainProbability;
+
+
+    // Use this for initialization
+    void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
         this.player = GameObject.FindWithTag("anchor");
         this.SpawnTornado();
@@ -24,21 +32,34 @@ public class WeatherManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        int changeChance = Random.Range(1, 1000);
-        if(changeChance == 50)
-        {
-            ChangeRain();
-        }
+        ChanceOfRain();
 	}
 
 
     /// <summary>
-    /// Start rainning
+    /// Probability of changing the weather occurs here
     /// </summary>
-    void ChangeRain()
+    void ChanceOfRain()
     {
-        var emission = this.particalSystem.emission;
-        emission.enabled = !emission.enabled;
+        int changeChance = Random.Range(1, rainProbability);
+        if (changeChance == rainProbability)
+        {
+            var emission = this.particalSystem.emission;
+            emission.enabled = !emission.enabled;
+        }
+    }
+
+
+    /// <summary>
+    /// Determines the chance of spawning a tornado.
+    /// </summary>
+    void ChanceOfSpawningTornado()
+    {
+        int spawnChance = Random.Range(1, spawnProbability);
+        if (changeChance == spawnProbability)
+        {
+            SpawnTornado();
+        }
     }
 
 
