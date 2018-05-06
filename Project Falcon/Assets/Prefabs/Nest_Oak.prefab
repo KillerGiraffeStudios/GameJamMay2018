@@ -72,8 +72,10 @@ MonoBehaviour:
   enemyList:
   - {fileID: 1899744424197776, guid: 31f3b823fab8c694fbae3ae130b368bf, type: 2}
   - {fileID: 1530842871163204, guid: 24d8f15603021344facb1784e4477161, type: 2}
-  spawnRate: 780000002c010000
-  spawnsAtTreesDead: 0000000000000000
+  - {fileID: 1285326843695964, guid: dece1c16e92a53045a1989b813a11293, type: 2}
+  - {fileID: 1668020965541088, guid: 616024f9ac96efc4792ef1075eadf42a, type: 2}
+  spawnRate: 780000002c010000b004000060090000
+  spawnsAtTreesDead: 00000000000000000000000000000000
   treesDead: 0
   trees: []
   isdead: 0
