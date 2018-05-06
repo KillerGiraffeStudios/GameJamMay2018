@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour {
 
+    public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +22,8 @@ public class HitDetection : MonoBehaviour {
         if(coll.gameObject.tag == "enemy")
         {
             coll.gameObject.SendMessage("Damage");
+            GameObject newExplosion = Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(newExplosion, 1f);
             Destroy(gameObject);
         }
     }

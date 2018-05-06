@@ -29,6 +29,9 @@ public class ArrowAim : MonoBehaviour {
         } else {
             this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
+        if(target.GetComponent<TreeSpawner>().isdead) {
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
        
     }
 }

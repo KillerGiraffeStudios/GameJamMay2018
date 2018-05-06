@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnTreeHealth : Health {
 
-
+    public GameObject explosion;
 
     public override void Kill() {
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -14,6 +14,8 @@ public class SpawnTreeHealth : Health {
     }
     void OnTriggerEnter2D(Collider2D other) {
         if(other.name == "bullet(Clone)") {
+            GameObject newExplosion = Instantiate(explosion, other.transform.position, other.transform.rotation);
+            Destroy(newExplosion, 1f);
             Destroy(other.gameObject);
             this.Damage();
         }

@@ -93,6 +93,7 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 15
   UI: {fileID: 0}
+  explosion: {fileID: 1353528433077132, guid: be627bd911e02de458ec00a8cda9b9f0, type: 2}
 --- !u!212 &212380082911952392
 SpriteRenderer:
   m_ObjectHideFlags: 1
