@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 82840320951816354}
   m_Layer: 0
   m_Name: rabbit
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
