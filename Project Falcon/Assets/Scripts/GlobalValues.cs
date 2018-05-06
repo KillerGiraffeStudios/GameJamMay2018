@@ -104,6 +104,15 @@ public static class GlobalValues {
 
     }
 
+    private static int _animalsKilled;
+    public static int animalsKilled
+    {
+        get
+        {
+            return _catsKilled + _rabbitsKilled + _bearsKilled + _oakTreesKilled + _squirrelsKilled;
+        }
+    }
+
 
 	
 }
