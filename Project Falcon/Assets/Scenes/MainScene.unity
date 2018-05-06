@@ -2133,6 +2133,16 @@ Prefab:
       propertyPath: InitialModule.startLifetime.maxCurve.m_Curve.Array.data[5].time
       value: 0.3491516
       objectReference: {fileID: 0}
+    - target: {fileID: 114467689428173062, guid: 264e0e7aa1932964f94687d9cfe4e45e,
+        type: 2}
+      propertyPath: spawnProbability
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114467689428173062, guid: 264e0e7aa1932964f94687d9cfe4e45e,
+        type: 2}
+      propertyPath: rainProbability
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 264e0e7aa1932964f94687d9cfe4e45e, type: 2}
   m_IsPrefabParent: 0
