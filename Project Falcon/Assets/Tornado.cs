@@ -107,7 +107,6 @@ public class Tornado : MonoBehaviour {
 
         // Pull towards tornado
         unfortunateSoul.GetComponent<Rigidbody2D>().AddForce(new Vector2(this.force * (1 / Mathf.Max(xDistance,minDistance)), this.force * (1 / Mathf.Max(yDistance,minDistance))));
-        print("Tornado force applied.");
     }
     float minDistance = 0.1f;
     
