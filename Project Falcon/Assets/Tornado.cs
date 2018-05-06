@@ -107,9 +107,10 @@ public class Tornado : MonoBehaviour {
 
         // Pull towards tornado
         unfortunateSoul.GetComponent<Rigidbody2D>().AddForce(new Vector2(10 * (1 / xDistance), 10 * (1 / yDistance)));
+        print("Tornado force applied.");
     }
 
-    /*
+    
     /// <summary>
     /// OnCollisionEnter() will be called whenever an object collieds with the tornado and then 
     /// call the correct function.
@@ -117,13 +118,14 @@ public class Tornado : MonoBehaviour {
     /// <param name="obj"></param>
     void OnCollisionEnter(Collision obj)
     {
+        print("Collision enter activated");
         // If we collied with the players, refrence them and start dealing damage
         if (obj.gameObject.tag == "Ship")
         {
             this.player = obj.gameObject;
-            this.damagePlayer = true;
+            //this.damagePlayer = true;
         }
-    }*/
+    }
 
     
     /// <summary>
@@ -132,11 +134,31 @@ public class Tornado : MonoBehaviour {
     /// <param name="collision"></param>
     private void OnTriggerStay2D(Collider2D collision)
     {
+        print("Trigger stay activated");
         if(collision.gameObject.tag == "Player"  || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
         {
             TornadoForce(collision.gameObject);
         }
     }
 
-    
+    private void OnTriggerEnter(Collider collision)
+    {
+        print("Trigger enter activated");
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
+        {
+            TornadoForce(collision.gameObject);
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("Trigger enter activated");
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
+        {
+            TornadoForce(collision.gameObject);
+        }
+    }
+
+
 }
