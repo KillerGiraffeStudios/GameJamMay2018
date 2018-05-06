@@ -844,6 +844,7 @@ MonoBehaviour:
   maxHealth: 20
   currentHealth: 20
   UI: {fileID: 566105383}
+  ex: {fileID: 1345410244}
 --- !u!233 &385884281
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1418,6 +1419,11 @@ Prefab:
 --- !u!4 &1345410243 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4913860339868142, guid: 93a16c1172d08394894aa026c46ef87c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1345410242}
+--- !u!1 &1345410244 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1532593173879664, guid: 93a16c1172d08394894aa026c46ef87c,
     type: 2}
   m_PrefabInternal: {fileID: 1345410242}
 --- !u!1 &1359259186

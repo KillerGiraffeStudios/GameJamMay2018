@@ -8,10 +8,11 @@ public class Health : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
     public BarScript UI = null;
-
+    public GameObject ex;
 	// Use this for initialization
 	void Start () {
         currentHealth = maxHealth;
+        
 	}
 
     public void Damage()
@@ -52,8 +53,8 @@ public class Health : MonoBehaviour {
         //InvokeDestroy(gameObject);
         if (CompareTag("anchor"))
         {
+            
             GameObject ship = GameObject.FindWithTag("Ship");
-            GameObject ex = GameObject.FindWithTag("Explosion");
             ship.SetActive(false);
             ex.SetActive(true);
             Invoke("EndGame", 2.0f);
