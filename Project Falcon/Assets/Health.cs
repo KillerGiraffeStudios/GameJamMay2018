@@ -50,11 +50,12 @@ public class Health : MonoBehaviour {
             GlobalValues.numCreatures--;
             Destroy(gameObject);
         }
+        GameObject ship = GameObject.FindWithTag("Ship");
         //InvokeDestroy(gameObject);
         if (CompareTag("anchor"))
         {
             
-            GameObject ship = GameObject.FindWithTag("Ship");
+            
             ship.SetActive(false);
             ex.SetActive(true);
             Invoke("EndGame", 2.0f);
