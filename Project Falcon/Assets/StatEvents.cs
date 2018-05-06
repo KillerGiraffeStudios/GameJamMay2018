@@ -30,17 +30,11 @@ public class StatEvents : MonoBehaviour {
 		}
 		killCount["total"]++;
 
-		bool play = true;
-		switch(killCount["total"]){
-			// case 1:
-			// 	source.clip = killEvent[0];
-			// 	break;
-			default:
-				play = false;
-				break;
-		}
-
-		if(play){
+		if(killCount["total"] == 1){
+			source.clip = killEvent[0];
+		}else
+		if(killCount["total"]%30==0){
+			source.clip = killEvent[Random.Range(1,killEvent.Length)];
 			source.Play();
 		}
 
