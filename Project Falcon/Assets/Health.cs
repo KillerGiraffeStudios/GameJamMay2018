@@ -9,6 +9,7 @@ public class Health : MonoBehaviour {
     public int currentHealth;
     public BarScript UI = null;
     public GameObject ex;
+    public GameObject ship;
 	// Use this for initialization
 	void Start () {
         currentHealth = maxHealth;
@@ -50,7 +51,8 @@ public class Health : MonoBehaviour {
             GlobalValues.numCreatures--;
             Destroy(gameObject);
         }
-        GameObject ship = GameObject.FindWithTag("Ship");
+        
+
         //InvokeDestroy(gameObject);
         if (CompareTag("anchor"))
         {
