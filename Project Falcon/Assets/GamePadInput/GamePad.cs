@@ -16,7 +16,7 @@ namespace GamepadInput
         public enum Axis { LeftStick, RightStick, Dpad }
         public enum Index { Any, One, Two, Three, Four }
         
-
+    
         public static bool GetButtonDown(Button button, Index controlIndex)
         {
             bool keyboard = false;
