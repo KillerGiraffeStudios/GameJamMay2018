@@ -10,7 +10,7 @@ public class squirrel_AI : MonoBehaviour {
     public float MinDist = 3.0f;
     public float MaxDist = 8.0f;
     private GameObject Anchor;
-    public int speed = 2;
+    public int speed = 3;
     public GameObject Bullet;
     private bool cooldown = false;
     AudioSource shootingsound;
