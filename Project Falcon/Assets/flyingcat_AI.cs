@@ -15,10 +15,16 @@ public class flyingcat_AI : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Anchor = GameObject.FindGameObjectWithTag("anchor");
+        DeathTimer();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void DeathTimer()
+    {
+        Destroy(gameObject, 120);
+    }
+
+    // Update is called once per frame
+    void Update () {
         timer++;
         if(timer >= 200)
         {

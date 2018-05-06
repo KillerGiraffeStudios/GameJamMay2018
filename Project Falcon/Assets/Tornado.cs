@@ -107,7 +107,6 @@ public class Tornado : MonoBehaviour {
 
         // Pull towards tornado
         unfortunateSoul.GetComponent<Rigidbody2D>().AddForce(new Vector2(this.force * (1 / Mathf.Max(xDistance,minDistance)), this.force * (1 / Mathf.Max(yDistance,minDistance))));
-        print("Tornado force applied.");
     }
     float minDistance = 0.1f;
     
@@ -117,7 +116,7 @@ public class Tornado : MonoBehaviour {
     /// <param name="collision"></param>
     private void OnTriggerStay2D(Collider2D collision)
     {
-        print("Trigger stay activated");
+        
         if(collision.gameObject.tag == "Player"  || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
         {
             TornadoForce(collision.gameObject);

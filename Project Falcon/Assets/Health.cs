@@ -18,7 +18,7 @@ public class Health : MonoBehaviour {
     {
         currentHealth--;
         if(UI != null){
-            UI.setBar(currentHealth*1f/maxHealth);
+            updateUI();
             GetComponentInChildren<SpriteRenderer>().color = Color.red;
             Invoke("clearColor",0.2f);
         }
@@ -32,11 +32,21 @@ public class Health : MonoBehaviour {
         GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 
+    public void heal(){
+        currentHealth = currentHealth + maxHealth/4;
+        updateUI();
+    }
+
+    void updateUI(){
+        UI.setBar(currentHealth*1f/maxHealth);
+    }
+
     public virtual void Kill()
     {
         if(CompareTag("enemy")){
             Debug.Log(gameObject.name);
             MetaScript.GetStat().addKill(gameObject.name);
+            GlobalValues.numCreatures--;
         }
         Destroy(gameObject);
         if (CompareTag("anchor"))

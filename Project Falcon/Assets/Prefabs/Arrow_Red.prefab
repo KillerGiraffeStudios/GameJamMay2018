@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   playerCore: {fileID: 0}
+  distance: 0
 --- !u!212 &212783731580072536
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 94ebe9518bbaa51479608f024e8cb34d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e16d129534991ca4c9d5f7dfa5659704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -24,7 +24,8 @@ public class WeatherManager : MonoBehaviour {
 
     void Awake()
     {
-        InvokeRepeating("SpawnTornado", 2.0f, 5.0f);
+        InvokeRepeating("ChanceOfRain", 2.0f, 2.0f);
+        InvokeRepeating("ChanceOfSpawningTornado", 2.0f, 2.0f);
     }
 
     // Use this for initialization
@@ -36,8 +37,8 @@ public class WeatherManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ChanceOfRain();
-        ChanceOfSpawningTornado();
+        //ChanceOfRain();
+        //ChanceOfSpawningTornado();
 	}
 
 

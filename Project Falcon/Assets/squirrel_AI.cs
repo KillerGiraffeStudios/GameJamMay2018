@@ -21,8 +21,13 @@ public class squirrel_AI : MonoBehaviour {
     {
         Anchor = GameObject.FindGameObjectWithTag("anchor");
         shootingsound = gameObject.GetComponentInChildren<AudioSource>();
+        DeathTimer();
 
+    }
 
+    void DeathTimer()
+    {
+        Destroy(gameObject, 120);
     }
 
     // Update is called once per frame
