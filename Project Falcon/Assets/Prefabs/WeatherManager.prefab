@@ -55,8 +55,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tornadoPrefab: {fileID: 1412043384950806, guid: ffbb66e11e2b8f1408b22708ddc704eb,
     type: 2}
-  spawnProbability: 0
-  rainProbability: 0
+  spawnProbability: 50
+  rainProbability: 50
 --- !u!198 &198092712323832724
 ParticleSystem:
   m_ObjectHideFlags: 1
