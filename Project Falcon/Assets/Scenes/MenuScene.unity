@@ -2533,6 +2533,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startText: {fileID: 1727152562}
   redText: {fileID: 465885544}
+  numberOfPlayersText:
+  - {fileID: 2031808039}
+  - {fileID: 1889411464}
+  - {fileID: 1697608530}
+  - {fileID: 537771558}
+  difficultiesTexts:
+  - {fileID: 482542827}
+  - {fileID: 167442800}
+  - {fileID: 448069306}
+  - {fileID: 694742991}
+  - {fileID: 1840189563}
   startTextBlinkTime: 1
 --- !u!4 &1915688493
 Transform:
