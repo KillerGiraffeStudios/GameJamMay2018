@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 894fdf53d1098f64f9dee35aee351e15
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: YouWin_0
+    21300002: YouWin_1
+    21300004: YouWin_2
+    21300006: YouWin_3
+    21300008: YouWin_4
+    21300010: YouWin_5
+    21300012: YouWin_6
+    21300014: YouWin_7
+    21300016: YouWin_8
+    21300018: YouWin_9
+    21300020: YouWin_10
+    21300022: YouWin_11
+    21300024: YouWin_12
+    21300026: YouWin_13
+    21300028: YouWin_14
+    21300030: YouWin_15
+    21300032: YouWin_16
+    21300034: YouWin_17
+    21300036: YouWin_18
+    21300038: YouWin_19
+    21300040: YouWin_20
+    21300042: YouWin_21
+    21300044: YouWin_22
+    21300046: YouWin_23
+    21300048: YouWin_24
+    21300050: YouWin_25
+    21300052: YouWin_26
+    21300054: YouWin_27
+    21300056: YouWin_28
+    21300058: YouWin_29
+    21300060: YouWin_30
+    21300062: YouWin_31
+    21300064: YouWin_32
+    21300066: YouWin_33
+    21300068: YouWin_34
+    21300070: YouWin_35
+    21300072: YouWin_36
+    21300074: YouWin_37
+    21300076: YouWin_38
+    21300078: YouWin_39
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YouWin_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 727
+        width: 1600
+        height: 163
+      alignment: 9
+      pivot: {x: 0.5017883, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634c86af1c4c809408e39468cace0ac7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YouWin_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 558
+        width: 1464
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f359f9d7894e154daa0306a8409e8df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ec9fa738c6cb29043940ec265f951ffb
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
