@@ -31,7 +31,7 @@ public class PCG : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        difficulty = GlobalValues.difficulty;
+        difficulty = GlobalValues.difficulty * GlobalValues.numPlayers;
         map = new bool[arrayLengthx, arrayLengthy];
         initialiseMap();
         for (int i = 0; i < numSteps; i++)
@@ -48,8 +48,8 @@ public class PCG : MonoBehaviour {
         while(nestTreesLeft > 0)
         {
             print(nestTreesLeft);
-            int x = Random.Range(0, arrayLengthx);
-            int y = Random.Range(0, arrayLengthy);
+            int x = Random.Range(5, arrayLengthx - 5);
+            int y = Random.Range(5, arrayLengthy - 5);
             if (!map[x, y])
             {
                 for(int i=x-1; i < x+1; i++)

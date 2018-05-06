@@ -30,7 +30,7 @@ public class Health : MonoBehaviour {
     {
         if(CompareTag("enemy")){
             Debug.Log(gameObject.name);
-            MetaScript.GetStat().addKill(tag);
+            MetaScript.GetStat().addKill(gameObject.name);
         }
         Destroy(gameObject);
         if (CompareTag("anchor"))

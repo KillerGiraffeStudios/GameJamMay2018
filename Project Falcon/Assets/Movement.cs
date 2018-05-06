@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour {
 	public GamePad.Index Player = GamePad.Index.One;
 	private Rigidbody2D r_body;
 	private Abilities abilities;
+    public Sprite boostSprite;
+    public Sprite normalSprite;
 	// public float acceleration = 0;
 	// public float turnSpeed = 1;
 	// public float maxVelocity;
@@ -15,7 +17,9 @@ public class Movement : MonoBehaviour {
 	void Start () {
 		r_body = GetComponent<Rigidbody2D>();
 		abilities = GetComponent<Abilities>();
-	}
+        
+
+    }
 	
 	Vector2 leftStick;
 	Vector2 rightStick;
@@ -34,13 +38,21 @@ public class Movement : MonoBehaviour {
 
 
 		float boost = 1f;
-		if(abilities.boost(Player)){
-			boost = 5f;
-		}else if(abilities.brake(Player,r_body)){
-			//Do nothing
-		}else{
-			abilities.addEnergy();
-		}
+        if (abilities.boost(Player))
+        {
+            boost = 5f;
+            gameObject.GetComponentInChildren<SpriteRenderer>().sprite = boostSprite;
+        }
+        else {
+            gameObject.GetComponentInChildren<SpriteRenderer>().sprite = normalSprite;
+            if (abilities.brake(Player, r_body))
+            {
+                //Do nothing
+            }
+            else {
+                abilities.addEnergy();
+            }
+        }
 
 		abilities.updateUI();
 
