@@ -11,8 +11,8 @@ public class SpawnTreeHealth : Health {
         this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         this.gameObject.GetComponent<TreeSpawner>().isdead = true;
     }
-    void OnTriggerEnter(Collider other) {
-        if(other.name == "bullet") {
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.name == "bullet(Clone)") {
             Destroy(other.gameObject);
             this.Damage();
         }
