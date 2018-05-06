@@ -94,7 +94,7 @@ MonoBehaviour:
   directionSpeedX: 5
   directionSpeedY: 5
   rotationSpeed: 60
-  force: 0
+  force: 100
 --- !u!198 &198007128336778882
 ParticleSystem:
   m_ObjectHideFlags: 1
