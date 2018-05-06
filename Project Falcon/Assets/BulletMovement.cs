@@ -31,11 +31,13 @@ public class BulletMovement : MonoBehaviour {
         {
             gameObject.GetComponent<AudioSource>().Play();
         }
-        
-        
+
+        float spawnSpeedX = bulletSpawn.parent.gameObject.GetComponent<Rigidbody2D>().velocity.x;
+        float spawnSpeedY = bulletSpawn.parent.gameObject.GetComponent<Rigidbody2D>().velocity.y;
+
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         var rotation = transform.eulerAngles.z * Mathf.Deg2Rad;
-        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation)*speed, Mathf.Sin(rotation)*speed);
+        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation)*speed + spawnSpeedX, Mathf.Sin(rotation)*speed + spawnSpeedY);
         Destroy(bullet, 5.0f);
     }
 }
