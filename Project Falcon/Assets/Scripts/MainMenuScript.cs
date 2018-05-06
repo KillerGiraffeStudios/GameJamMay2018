@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using GamepadInput;
 
 public class MainMenuScript : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class MainMenuScript : MonoBehaviour {
 
     public List<Transform> numberOfPlayersText;
     public List<Transform> difficultiesTexts;
+
+    public GamePad.Index Player = GamePad.Index.Any;
 
 
 
@@ -35,13 +38,16 @@ public class MainMenuScript : MonoBehaviour {
 	void Start () {
         InvokeRepeating("AnimateStartText", startTextBlinkTime, startTextBlinkTime);
 	}
-	
 
 
+    Vector2 leftStick;
 	// Update is called once per frame
 	void Update () {
 
+
+
         Reset();
+        leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, Player);
 
         if (textColourTimer <= 0)
         {
@@ -63,12 +69,12 @@ public class MainMenuScript : MonoBehaviour {
 
         if (canChangeNumPlayers)
         {
-            if (Input.GetKey("up"))
+            if (Input.GetKey("up") || leftStick.y>0.15)
             {
                 numberOfPlayers = ChangeNumberOfPlayers(1);
             }
 
-            if (Input.GetKey("down"))
+            if (Input.GetKey("down") || leftStick.y<-0.15)
             {
                 numberOfPlayers = ChangeNumberOfPlayers(-1);
             }
@@ -80,12 +86,12 @@ public class MainMenuScript : MonoBehaviour {
         if (canChangeDifficulty)
         {
 
-            if (Input.GetKey("left"))
+            if (Input.GetKey("left") || leftStick.x > 0.15)
             {
                 difficulty = ChangeDifficulty(-1);
             }
 
-            if (Input.GetKey("right"))
+            if (Input.GetKey("right") || leftStick.x < -0.15)
             {
                 difficulty = ChangeDifficulty(1);
             }
@@ -94,7 +100,7 @@ public class MainMenuScript : MonoBehaviour {
             difficultyTimer = 0.25f;
         }
 
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) || GamePad.GetButtonDown(GamePad.Button.Start,Player))
         {
             StartGame(numberOfPlayers, difficulty);
         }
