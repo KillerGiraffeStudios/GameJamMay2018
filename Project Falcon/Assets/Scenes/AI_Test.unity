@@ -1026,6 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d377513d58f43b4087d519ebfa72aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCount: 1
   maxSpeed: 5
   acceleration: 12
   turnSpeed: 4
