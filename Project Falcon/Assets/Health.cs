@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
@@ -31,6 +32,7 @@ public class Health : MonoBehaviour {
             MetaScript.GetStat().addKill(tag);
         }
         Destroy(gameObject);
+        SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }
 }
 
