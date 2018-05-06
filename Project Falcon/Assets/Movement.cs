@@ -26,10 +26,11 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, Player);
-		rightStick = GamePad.GetAxis(GamePad.Axis.RightStick, Player);
-		leftStick += rightStick;
+		// rightStick = GamePad.GetAxis(GamePad.Axis.RightStick, Player);
+		// leftStick += rightStick;
 		leftStick += GamePad.GetAxis(GamePad.Axis.Dpad, Player);
-		leftStick += new Vector2(GamePad.GetTrigger(GamePad.Trigger.LeftTrigger, Player),0);
+		//Switch controller
+		// leftStick += new Vector2(GamePad.GetTrigger(GamePad.Trigger.LeftTrigger, Player),0);
 		// leftStick.Normalize();
 		transform.Rotate(0,0,-leftStick.x * MetaScript.getTurnSpeed());
 		
