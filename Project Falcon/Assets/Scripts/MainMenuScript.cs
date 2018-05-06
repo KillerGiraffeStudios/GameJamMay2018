@@ -96,6 +96,11 @@ public class MainMenuScript : MonoBehaviour {
             difficultyTimer = 0.25f;
         }
 
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            StartGame(numberOfPlayers, difficulty);
+        }
+
 	}
 
     private void Reset()
