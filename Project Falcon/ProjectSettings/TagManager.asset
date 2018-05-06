@@ -9,6 +9,7 @@ TagManager:
   - anchor
   - Tornado
   - Explosion
+  - Ship
   layers:
   - Default
   - TransparentFX
