@@ -8,7 +8,6 @@ public class MainCamera : MonoBehaviour {
     [SerializeField]
     private GameObject anchor;
 
-
     // Use this for initialization
     void Start () {
         
@@ -16,6 +15,31 @@ public class MainCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.position = new Vector3(anchor.position.transform.x, anchor.position.transform.y, 0);
+
+        // Grab the position of the players
+        float anchorX = this.anchor.transform.position.x;
+        float anchorY = this.anchor.transform.position.y;
+
+        if(anchorX < 20.0f)
+        {
+            anchorX = 20.0f;
+        }
+
+        if (anchorX > 180.0f)
+        {
+            anchorX = 180.0f;
+        }
+
+        if (anchorY < 20.0f)
+        {
+            anchorY = 20.0f;
+        }
+
+        if (anchorY > 180.0f)
+        {
+            anchorY = 180.0f;
+        }
+
+        this.transform.position = new Vector3(anchorX, anchorY, 0);
 	}
 }
