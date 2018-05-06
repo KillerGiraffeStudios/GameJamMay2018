@@ -56,7 +56,7 @@ public class WeatherManager : MonoBehaviour {
     void ChanceOfSpawningTornado()
     {
         int spawnChance = Random.Range(1, spawnProbability);
-        if (changeChance == spawnProbability)
+        if (spawnChance == spawnProbability)
         {
             SpawnTornado();
         }
