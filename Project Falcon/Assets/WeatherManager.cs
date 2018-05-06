@@ -33,6 +33,7 @@ public class WeatherManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ChanceOfRain();
+        ChanceOfSpawningTornado();
 	}
 
 
