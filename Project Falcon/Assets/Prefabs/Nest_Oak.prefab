@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4705560311364356}
   - component: {fileID: 212380082911952392}
   - component: {fileID: 114552613751581570}
+  - component: {fileID: 58142211305461124}
+  - component: {fileID: 114885468875426800}
   m_Layer: 0
   m_Name: Nest_Oak
   m_TagString: SpawnTree
@@ -35,12 +37,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868336867798802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9, y: 0, z: 0}
+  m_LocalPosition: {x: 9.99057, y: -12.549713, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58142211305461124
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868336867798802}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5
 --- !u!114 &114552613751581570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,11 +72,26 @@ MonoBehaviour:
   enemyList:
   - {fileID: 1899744424197776, guid: 31f3b823fab8c694fbae3ae130b368bf, type: 2}
   - {fileID: 1530842871163204, guid: 24d8f15603021344facb1784e4477161, type: 2}
-  spawnRate: 780000002c010000
-  spawnsAtTreesDead: 0000000000000000
+  - {fileID: 1285326843695964, guid: dece1c16e92a53045a1989b813a11293, type: 2}
+  - {fileID: 1668020965541088, guid: 616024f9ac96efc4792ef1075eadf42a, type: 2}
+  spawnRate: 780000002c010000b004000060090000
+  spawnsAtTreesDead: 00000000000000000000000000000000
   treesDead: 0
   trees: []
   isdead: 0
+--- !u!114 &114885468875426800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868336867798802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7552c3306c4c148a6a20e784f1cafa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 15
+  currentHealth: 15
 --- !u!212 &212380082911952392
 SpriteRenderer:
   m_ObjectHideFlags: 1

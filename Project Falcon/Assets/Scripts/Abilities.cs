@@ -39,6 +39,6 @@ public class Abilities : MonoBehaviour {
 	}
 
 	public void updateUI(){
-		energyBar.setBar(curEnergy*100f/maxEnergy);
+		energyBar.setBar(curEnergy*1f/maxEnergy);
 	}
 }

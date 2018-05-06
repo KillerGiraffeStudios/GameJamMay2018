@@ -7,28 +7,30 @@ public class Health : MonoBehaviour {
 
     public int maxHealth;
     public int currentHealth;
+    public BarScript UI = null;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        currentHealth = maxHealth;
 	}
 
-    void Damage()
+    public void Damage()
     {
         currentHealth--;
+        if(UI != null){
+            UI.setBar(currentHealth*1f/maxHealth);
+        }
         if(currentHealth <= 0)
         {
             Kill();
         }
     }
 
-    void Kill()
+    public virtual void Kill()
     {
+        if(CompareTag("enemy")){
+            MetaScript.GetStat().addKill(tag);
+        }
         Destroy(gameObject);
         SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }

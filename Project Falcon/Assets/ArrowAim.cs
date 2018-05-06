@@ -22,7 +22,7 @@ public class ArrowAim : MonoBehaviour {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             distance = Vector3.Distance(this.transform.position, target.transform.position);
-            this.transform.localScale = new Vector3((0.05f + (0.95f*(5/distance))), (0.05f + (0.95f * (5 / distance))), (0.05f + 0.95f * (5 / distance)) );
+            this.transform.localScale = new Vector3((0.05f + (0.25f*(5/distance))), (0.05f + (0.25f * (5 / distance))), (0.05f + 0.25f * (5 / distance)) );
         }
         if ( distance < 5) {
             this.gameObject.GetComponent<SpriteRenderer>().enabled = false;

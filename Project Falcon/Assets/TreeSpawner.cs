@@ -42,7 +42,7 @@ public class TreeSpawner : MonoBehaviour {
          * to see if the correct number of ticks have passed to spawn the creature
          */
         for(int i = 0; i < enemyList.Length; i = i + 1) {
-            if (spawnsAtTreesDead[i] <= treesDead) {
+            if (spawnsAtTreesDead[i] <= treesDead && !isdead) {
                 if (Mathf.Floor(tick/spawnRate[i]) > numEnemiesSpawned[i]) {
                     Spawn(enemyList[i]);
                     numEnemiesSpawned[i] = numEnemiesSpawned[i] + 1;

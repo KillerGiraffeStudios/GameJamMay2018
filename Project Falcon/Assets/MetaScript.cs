@@ -5,6 +5,7 @@ using UnityEngine;
 public class MetaScript : MonoBehaviour {
 	private static GameObject Meta;
 	private static GameObject Anchor;
+	private static StatEvents stat;
 
 	
 	[Range(1,4)]public int playerCount = 1;
@@ -30,6 +31,12 @@ public class MetaScript : MonoBehaviour {
 			Anchor = GameObject.Find("anchor");
 		}
 		return Anchor;
+	}
+	public static StatEvents GetStat(){
+		if(stat == null){
+			stat = GetMeta().GetComponent<StatEvents>();
+		}
+		return stat;
 	}
 	
 	// TEMP
