@@ -13,32 +13,57 @@ public class Abilities : MonoBehaviour {
 		r_body = GetComponent<Rigidbody2D>();
 		energyBar = GameObject.Find("Energy"+(int)GetComponent<Movement>().Player).GetComponent<BarScript>();
 	}
-
+	
 	int brakeCost = 10;
 	public bool brake(GamePad.Index player, Rigidbody2D r_body){
-		if(GamePad.GetButton(GamePad.Button.B, player) && curEnergy >= brakeCost){
-			r_body.AddForce(r_body.velocity * -4);
-			curEnergy -= brakeCost;
-			return true;
+		if(curEnergy >= brakeCost){
+			if(GamePad.GetButton(GamePad.Button.B, player) && !locked){
+				r_body.AddForce(r_body.velocity * -8);
+				curEnergy -= brakeCost;
+				return true;
+			}
+		}else{
+			lockEnergy();
 		}
 		return false;
 	}
 
 	int boostCost = 20;
 	public bool boost(GamePad.Index player){
-		if(GamePad.GetButton(GamePad.Button.X, player) && curEnergy >= boostCost){
-			curEnergy -= boostCost;
-			return true;
+		if(curEnergy >= boostCost){
+			if(GamePad.GetButton(GamePad.Button.X, player) && !locked){
+				curEnergy -= boostCost;
+				return true;
+			}
+		}else{
+			lockEnergy();
 		}
 		return false;
 	}
 
+	void lockEnergy(){
+		locked = true;
+		energyBar.lockBar();
+	}
+	public void unlockEnergy(){
+		if(locked && getPercent()>0.33f){
+			locked = false;
+			energyBar.unlockBar();
+		}
+	}
+	bool locked = false;
+
 	public void addEnergy(){
 		if(curEnergy < maxEnergy)
-			curEnergy++;
+			curEnergy+=2;
+		unlockEnergy();
+	}
+
+	public float getPercent(){
+		return curEnergy*1f/maxEnergy;
 	}
 
 	public void updateUI(){
-		energyBar.setBar(curEnergy*1f/maxEnergy);
+		energyBar.setBar(getPercent());
 	}
 }

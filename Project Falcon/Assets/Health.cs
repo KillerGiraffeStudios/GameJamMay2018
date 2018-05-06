@@ -19,11 +19,17 @@ public class Health : MonoBehaviour {
         currentHealth--;
         if(UI != null){
             UI.setBar(currentHealth*1f/maxHealth);
+            GetComponent<SpriteRenderer>().color = Color.red;
+            Invoke("clearColor",0.2f);
         }
         if(currentHealth <= 0)
         {
             Kill();
         }
+    }
+
+    private void clearColor(){
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     public virtual void Kill()

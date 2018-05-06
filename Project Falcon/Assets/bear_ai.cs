@@ -25,13 +25,25 @@ public class bear_ai : MonoBehaviour {
 
 
 
-        if (Vector3.Distance(transform.position, Anchor.transform.position) <= MaxDist)
+        /*if (Vector3.Distance(transform.position, Anchor.transform.position) <= MaxDist)
         {
             Anchor.SendMessage("Damage");
             Anchor.SendMessage("Damage");
             Anchor.SendMessage("Damage");
             Anchor.SendMessage("Damage");
             Anchor.SendMessage("Damage");
+            Destroy(gameObject);
+        }*/
+    }
+
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "anchor")
+        {
+            coll.gameObject.SendMessage("Damage");
+            coll.gameObject.SendMessage("Damage");
+            coll.gameObject.SendMessage("Damage");
             Destroy(gameObject);
         }
     }
