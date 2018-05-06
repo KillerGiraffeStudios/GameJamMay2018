@@ -17,7 +17,7 @@ public class Health : MonoBehaviour {
 		
 	}
 
-    void Damage()
+    public void Damage()
     {
         currentHealth--;
         if(currentHealth <= 0)
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour {
         }
     }
 
-    void Kill()
+    public virtual void Kill()
     {
         Destroy(gameObject);
     }

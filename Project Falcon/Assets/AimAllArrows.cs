@@ -20,7 +20,7 @@ public class AimAllArrows : MonoBehaviour {
                     GameObject newArrow = Instantiate(arrow);
                     newArrow.GetComponent<ArrowAim>().target = go;
                     newArrow.GetComponent<ArrowAim>().playerCore = this.gameObject;
-                    arrows[i] = go;
+                    arrows[i] = newArrow;
                     i++;
                 }
                 notSpawned = false;
