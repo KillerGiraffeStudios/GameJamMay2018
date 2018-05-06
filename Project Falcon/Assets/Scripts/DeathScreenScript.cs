@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using GamepadInput;
 
 public class DeathScreenScript : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class DeathScreenScript : MonoBehaviour {
     public Text catsKilled;
     public Text squirrelsMurdered;
     public Text bearsIncinerated;
+    public GamePad.Index Player = GamePad.Index.Any;
 
     [SerializeField]
     public GameObject mainMenuText;
@@ -27,11 +29,12 @@ public class DeathScreenScript : MonoBehaviour {
         curSelected = playAgainText;
         InvokeRepeating("Blink", textBlinkTime, textBlinkTime);
 	}
-	
+    Vector2 leftStick;
 	// Update is called once per frame
 	void Update () {
+        leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, Player);
 
-        if (Input.GetKey("left") || Input.GetKey("right"))
+        if (Input.GetKey("left") || Input.GetKey("right") || leftStick.x>0 || leftStick.x<0)
         {
             if (curSelected == mainMenuText)
             {
@@ -45,7 +48,7 @@ public class DeathScreenScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKey(KeyCode.Return) || GamePad.GetButtonDown(GamePad.Button.Start, Player))
         {
             if(curSelected == playAgainText)
             {
