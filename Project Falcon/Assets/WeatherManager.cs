@@ -22,12 +22,16 @@ public class WeatherManager : MonoBehaviour {
     [SerializeField]
     private int rainProbability;
 
+    void Awake()
+    {
+        InvokeRepeating("SpawnTornado", 2.0f, 5.0f);
+    }
 
     // Use this for initialization
     void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
         this.player = GameObject.FindWithTag("anchor");
-        InvokeRepeating("SpawnTornado", 2.0f, 10.0f);
+        SpawnTornado();
     }
 	
 	// Update is called once per frame
