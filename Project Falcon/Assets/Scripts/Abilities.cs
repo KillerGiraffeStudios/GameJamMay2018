@@ -6,13 +6,11 @@ using GamepadInput;
 public class Abilities : MonoBehaviour {
 	private int maxEnergy = 1000;
 	private int curEnergy = 1000;
-	private Rigidbody2D r_body;
 	private BarScript energyBar;
 	public AudioClip jets;
 	public AudioSource jetSource;
 	// Use this for initialization
 	void Start () {
-		r_body = GetComponent<Rigidbody2D>();
 		energyBar = GameObject.Find("Energy"+(int)GetComponent<Movement>().Player).GetComponent<BarScript>();
 		jetSource.clip = jets;
 	}
