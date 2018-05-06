@@ -5,17 +5,42 @@ using UnityEngine;
 public class SpawnTreeHealth : Health {
 
     public GameObject explosion;
-    public GameObject heal; 
+    public GameObject healPick;
+    public GameObject Guardian;
+
+    void Start() {
+        currentHealth = maxHealth * GlobalValues.numPlayers;
+    }
 
     public override void Kill() {
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         this.gameObject.GetComponent<TreeSpawner>().SetDead();
         GlobalValues.oakTreesKilled += 1;
-        if(Random.Range(1,5) <= 2) {
-            Instantiate(heal, this.transform.position, this.transform.rotation);
+        if (Random.Range(1, 5) <= 2) {
+            Instantiate(healPick, this.transform.position, this.transform.rotation);
         }
-        
+        for (int i = 0; i < GlobalValues.oakTreesKilled * GlobalValues.numPlayers; i++) {
+            int rand = Mathf.FloorToInt(Random.Range(1f, 4.9f));
+            if (rand == 1) {
+                float randX = Random.Range(-5, 5);
+                Instantiate(Guardian, new Vector3(this.transform.position.x + randX, this.transform.position.y + 8f, this.transform.position.z), Quaternion.identity);
+                GlobalValues.numCreatures++;
+
+            } else if (rand ==2){
+                float randX = Random.Range(-5, 5);
+                Instantiate(Guardian, new Vector3(this.transform.position.x + randX, this.transform.position.y - 8f, this.transform.position.z), Quaternion.identity);
+                GlobalValues.numCreatures++;
+            } else if (rand == 3) {
+                float randY = Random.Range(-5, 5);
+                Instantiate(Guardian, new Vector3(this.transform.position.x + 8, this.transform.position.y + randY, this.transform.position.z), Quaternion.identity);
+                GlobalValues.numCreatures++;
+            } else if (rand == 4) {
+                float randY = Random.Range(-5, 5);
+                Instantiate(Guardian, new Vector3(this.transform.position.x - 8, this.transform.position.y + randY, this.transform.position.z), Quaternion.identity);
+                GlobalValues.numCreatures++;
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D other) {
         if(other.name == "bullet(Clone)") {
