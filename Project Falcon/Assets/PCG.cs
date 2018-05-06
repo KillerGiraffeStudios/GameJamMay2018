@@ -47,7 +47,7 @@ public class PCG : MonoBehaviour {
         int nestTreesLeft = difficulty;
         while(nestTreesLeft > 0)
         {
-            print(nestTreesLeft);
+           
             int x = Random.Range(5, arrayLengthx - 5);
             int y = Random.Range(5, arrayLengthy - 5);
             if (!map[x, y])

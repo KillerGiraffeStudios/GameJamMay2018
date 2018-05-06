@@ -12,7 +12,11 @@ public class rabbit_AI : MonoBehaviour {
     void Start()
     {
         Anchor = GameObject.FindGameObjectWithTag("anchor");
-
+        DeathTimer();
+    }
+    void DeathTimer()
+    {
+        Destroy(gameObject, 120);
     }
 
     // Update is called once per frame

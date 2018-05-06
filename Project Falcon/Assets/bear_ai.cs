@@ -14,10 +14,16 @@ public class bear_ai : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Anchor = GameObject.FindGameObjectWithTag("anchor");
+        DeathTimer();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void DeathTimer()
+    {
+        Destroy(gameObject, 120);
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (Vector3.Distance(transform.position, Anchor.transform.position) >= MinDist)
         {
             transform.position = Vector2.MoveTowards(transform.position, Anchor.transform.position, speed * Time.deltaTime);
