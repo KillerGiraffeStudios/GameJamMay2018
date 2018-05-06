@@ -74,8 +74,8 @@ MonoBehaviour:
   - {fileID: 1530842871163204, guid: 24d8f15603021344facb1784e4477161, type: 2}
   - {fileID: 1285326843695964, guid: dece1c16e92a53045a1989b813a11293, type: 2}
   - {fileID: 1668020965541088, guid: 616024f9ac96efc4792ef1075eadf42a, type: 2}
-  spawnRate: 780000002c010000b004000060090000
-  spawnsAtTreesDead: 00000000000000000000000000000000
+  spawnRate: 780000002c0100005802000084030000
+  spawnsAtTreesDead: 00000000010000000200000004000000
   treesDead: 0
   trees: []
   isdead: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   currentHealth: 15
+  UI: {fileID: 0}
 --- !u!212 &212380082911952392
 SpriteRenderer:
   m_ObjectHideFlags: 1
