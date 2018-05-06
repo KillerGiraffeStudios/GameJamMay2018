@@ -13,6 +13,7 @@ public class TreeSpawner : MonoBehaviour {
     public GameObject[] trees;
     public bool isdead = false;
     private float tick = 0;
+    private int spawnRateMulti = 0;
 
     // Use this for initialization
     void Start () {
@@ -20,6 +21,12 @@ public class TreeSpawner : MonoBehaviour {
         numEnemiesSpawned = new float[enemyList.Length];
         for (int i = 0; i < numEnemiesSpawned.Length; i++ ) {
             numEnemiesSpawned[i] = 0;
+        }
+
+        if (GlobalValues.numPlayers == 0) {
+            spawnRateMulti = 1;
+        } else {
+            spawnRateMulti = GlobalValues.numPlayers;
         }
     }
 
@@ -44,7 +51,7 @@ public class TreeSpawner : MonoBehaviour {
          */
         for(int i = 0; i < enemyList.Length; i = i + 1) {
             if (spawnsAtTreesDead[i] <= treesDead && !isdead) {
-                if (Mathf.Floor(tick/spawnRate[i]) > numEnemiesSpawned[i]) {
+                if (Mathf.Floor(tick/(spawnRate[i]/spawnRateMulti)) > numEnemiesSpawned[i]) {
                     Spawn(enemyList[i]);
                     numEnemiesSpawned[i] = numEnemiesSpawned[i] + 1;
                 }
