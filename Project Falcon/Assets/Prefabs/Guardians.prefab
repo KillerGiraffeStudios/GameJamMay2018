@@ -325,7 +325,7 @@ MonoBehaviour:
   acorn: {fileID: 1467909739565608, guid: 3b2699bf30faf8846a88beba8c70ce36, type: 2}
   MinDist: 8
   MaxDist: 8
-  speed: 1
+  speed: 2
   Bullet: {fileID: 1467909739565608, guid: 3b2699bf30faf8846a88beba8c70ce36, type: 2}
 --- !u!114 &114749387342144304
 MonoBehaviour:
