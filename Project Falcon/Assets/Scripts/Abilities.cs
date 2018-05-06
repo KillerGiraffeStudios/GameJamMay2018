@@ -56,6 +56,7 @@ public class Abilities : MonoBehaviour {
 	public void addEnergy(){
 		if(curEnergy < maxEnergy)
 			curEnergy+=2;
+		unlockEnergy();
 	}
 
 	public float getPercent(){
