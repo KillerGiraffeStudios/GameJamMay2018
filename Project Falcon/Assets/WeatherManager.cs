@@ -27,12 +27,12 @@ public class WeatherManager : MonoBehaviour {
     void Start () {
 		this.particalSystem = GetComponent<ParticleSystem>();
         this.player = GameObject.FindWithTag("anchor");
-        //this.SpawnTornado();
+        InvokeRepeating("SpawnTornado", 2.0f, 10.0f);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //ChanceOfRain();
+        ChanceOfRain();
         ChanceOfSpawningTornado();
 	}
 
@@ -56,12 +56,9 @@ public class WeatherManager : MonoBehaviour {
     /// </summary>
     void ChanceOfSpawningTornado()
     {
-        Debug.Log("Spawning tornado chance");
         int spawnChance = Random.Range(1, spawnProbability+1);
-        Debug.Log("Spawn Chance: " + spawnChance + " Spawn Prob: " + spawnProbability);
         if (spawnChance == spawnProbability)
         {
-            Debug.Log("Should spawn tornado");
             SpawnTornado();
         }
     }
@@ -73,7 +70,6 @@ public class WeatherManager : MonoBehaviour {
     /// </summary>
     void SpawnTornado()
     {
-        Debug.Log("Spawning tornado");
         // Determine the starting wall position where 1 = top and go clockwise
         int wall = Random.Range(0, 4);
 
