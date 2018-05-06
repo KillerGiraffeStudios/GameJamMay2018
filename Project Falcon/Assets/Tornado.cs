@@ -118,7 +118,6 @@ public class Tornado : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
         
-        print("Trigger stay activated");
         if(collision.gameObject.tag == "Player"  || collision.gameObject.tag == "enemy" || collision.gameObject.tag == "anchor")
         {
             TornadoForce(collision.gameObject);
